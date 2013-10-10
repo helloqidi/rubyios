@@ -57,6 +57,7 @@
     }
     
     self.tableView.tableData = topics;
+    
     [self.tableView reloadData];
 }
 

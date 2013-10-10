@@ -51,6 +51,9 @@
 		2D224D8518068C8400FC9B55 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D7518068C8400FC9B55 /* UIImage+MultiFormat.m */; };
 		2D224D8618068C8400FC9B55 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D7718068C8400FC9B55 /* UIImage+WebP.m */; };
 		2D224D8718068C8400FC9B55 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D7918068C8400FC9B55 /* UIImageView+WebCache.m */; };
+		2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D8A180690DD00FC9B55 /* TopicViewController.m */; };
+		2D224D8D180690DD00FC9B55 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224D8B180690DD00FC9B55 /* TopicViewController.xib */; };
+		2D224D911806930100FC9B55 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D901806930100FC9B55 /* UIView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,11 @@
 		2D224D7718068C8400FC9B55 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		2D224D7818068C8400FC9B55 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		2D224D7918068C8400FC9B55 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		2D224D89180690DD00FC9B55 /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
+		2D224D8A180690DD00FC9B55 /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
+		2D224D8B180690DD00FC9B55 /* TopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
+		2D224D8F1806930100FC9B55 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		2D224D901806930100FC9B55 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,14 +215,6 @@
 				2D224CE617F96EC800FC9B55 /* AppDelegate.h */,
 				2D224CE717F96EC800FC9B55 /* AppDelegate.m */,
 				2D224D0B17F96F8800FC9B55 /* CONSTS.h */,
-				2D224D4718065B6F00FC9B55 /* HomeViewController.h */,
-				2D224D4818065B6F00FC9B55 /* HomeViewController.m */,
-				2D224D4918065B6F00FC9B55 /* HomeViewController.xib */,
-				2D224D54180681AF00FC9B55 /* TopicTableView.h */,
-				2D224D55180681AF00FC9B55 /* TopicTableView.m */,
-				2D224D57180686F500FC9B55 /* TopicCell.h */,
-				2D224D58180686F500FC9B55 /* TopicCell.m */,
-				2D224D5A1806873A00FC9B55 /* TopicCell.xib */,
 				2D224D4D180673C000FC9B55 /* Controllers */,
 				2D224D4C180673A100FC9B55 /* Models */,
 				2D224D0E17F970B300FC9B55 /* Classes */,
@@ -273,6 +273,8 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2D224D8F1806930100FC9B55 /* UIView+Additions.h */,
+				2D224D901806930100FC9B55 /* UIView+Additions.m */,
 				2D224D2F17F971A600FC9B55 /* UIViewExt.h */,
 				2D224D3017F971A600FC9B55 /* UIViewExt.m */,
 				2D224D2C17F9714E00FC9B55 /* AFAppDotNetAPIClient.h */,
@@ -324,6 +326,8 @@
 		2D224D4D180673C000FC9B55 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D224D881806908000FC9B55 /* Home */,
+				2D224D8E180690EC00FC9B55 /* Topic */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -362,6 +366,31 @@
 				2D224D7918068C8400FC9B55 /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		2D224D881806908000FC9B55 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D224D4718065B6F00FC9B55 /* HomeViewController.h */,
+				2D224D4818065B6F00FC9B55 /* HomeViewController.m */,
+				2D224D4918065B6F00FC9B55 /* HomeViewController.xib */,
+				2D224D54180681AF00FC9B55 /* TopicTableView.h */,
+				2D224D55180681AF00FC9B55 /* TopicTableView.m */,
+				2D224D57180686F500FC9B55 /* TopicCell.h */,
+				2D224D58180686F500FC9B55 /* TopicCell.m */,
+				2D224D5A1806873A00FC9B55 /* TopicCell.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		2D224D8E180690EC00FC9B55 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				2D224D89180690DD00FC9B55 /* TopicViewController.h */,
+				2D224D8A180690DD00FC9B55 /* TopicViewController.m */,
+				2D224D8B180690DD00FC9B55 /* TopicViewController.xib */,
+			);
+			name = Topic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +471,7 @@
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
 				2D224CEA17F96EC800FC9B55 /* Images.xcassets in Resources */,
+				2D224D8D180690DD00FC9B55 /* TopicViewController.xib in Resources */,
 				2D224D4B18065B6F00FC9B55 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D224D911806930100FC9B55 /* UIView+Additions.m in Sources */,
 				2D224D56180681AF00FC9B55 /* TopicTableView.m in Sources */,
 				2D224D3117F971A600FC9B55 /* UIViewExt.m in Sources */,
 				2D224D2517F970E400FC9B55 /* AFImageRequestOperation.m in Sources */,
@@ -484,6 +515,7 @@
 				2D224D7C18068C8400FC9B55 /* SDImageCache.m in Sources */,
 				2D224D7F18068C8400FC9B55 /* SDWebImageDownloader.m in Sources */,
 				2D224D2B17F970E400FC9B55 /* UIImageView+AFNetworking.m in Sources */,
+				2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2D224D8518068C8400FC9B55 /* UIImage+MultiFormat.m in Sources */,
 				2D224D8318068C8400FC9B55 /* UIButton+WebCache.m in Sources */,

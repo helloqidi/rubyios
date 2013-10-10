@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TopicTableView.h"
 
-@interface HomeViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface HomeViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet TopicTableView *tableView;
 

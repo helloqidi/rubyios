@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopicTableView : UITableView <UITableViewDelegate,UITableViewDataSource>
+@interface TopicTableView : UITableView <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) NSArray *tableData;
 

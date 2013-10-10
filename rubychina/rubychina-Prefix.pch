@@ -16,4 +16,5 @@
     #import "CONSTS.h"
     #import "AFNetworking.h"
     #import "UIViewExt.h"
+    #import "UIView+Additions.h"
 #endif
