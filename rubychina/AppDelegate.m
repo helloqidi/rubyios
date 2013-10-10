@@ -18,8 +18,10 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+
     HomeViewController *homeCtrl = [[HomeViewController alloc] init];
-    self.window.rootViewController = homeCtrl;
+    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:homeCtrl];
+    self.window.rootViewController = navCtrl;
     
     return YES;
 }

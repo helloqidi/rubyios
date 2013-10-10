@@ -2,11 +2,13 @@
 //  HomeViewController.m
 //  rubychina
 //
-//  Created by 张 启迪 on 13-9-30.
+//  Created by 张 启迪 on 13-10-10.
 //  Copyright (c) 2013年 张 启迪. All rights reserved.
 //
 
 #import "HomeViewController.h"
+#import "AFAppDotNetAPIClient.h"
+#import "TopicModel.h"
 
 @interface HomeViewController ()
 
@@ -18,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = @"首页";
     }
     return self;
 }
@@ -26,25 +28,40 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self requestTopicData];
 }
 
 
-#pragma mark - UITableView Delegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//请求话题数据
+- (void)requestTopicData
 {
-    return 1;
+    [[AFAppDotNetAPIClient sharedClient] getPath:URL_TOPIC_ACTIVE
+                                      parameters:nil
+                                        success:^(AFHTTPRequestOperation *operation, id JSON) {
+                                            NSArray *jsonArray = (NSArray *) JSON;
+                                            [self requestTopicDataFinish:jsonArray];
+                                        }
+                                        failure:^(AFHTTPRequestOperation *operation, NSError *error){
+                                              NSLog(@"error:%@",error);
+                                        }];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//请求话题数据完成
+- (void)requestTopicDataFinish:(NSArray *)jsonArray
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = @"测试";
-    return cell;
+    NSMutableArray *topics=[NSMutableArray arrayWithCapacity:jsonArray.count];
+    for (NSDictionary *topicDic in jsonArray) {
+        TopicModel *topicModel = [[TopicModel alloc] initWithAttributes:topicDic];
+        [topics addObject:topicModel];
+    }
+    
+    self.tableView.tableData = topics;
+    [self.tableView reloadData];
 }
 
 
-#pragma mark - dealloc
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
