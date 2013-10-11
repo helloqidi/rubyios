@@ -57,6 +57,9 @@
 		2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D931806E52300FC9B55 /* ReplyModel.m */; };
 		2D224D971806E80700FC9B55 /* TopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D961806E80700FC9B55 /* TopicHeaderView.m */; };
 		2D224D991806E82100FC9B55 /* TopicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224D981806E82100FC9B55 /* TopicHeaderView.xib */; };
+		2D224D9C1807E01200FC9B55 /* ReplyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D9B1807E01200FC9B55 /* ReplyTableView.m */; };
+		2D224D9F1807E05A00FC9B55 /* ReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D9E1807E05A00FC9B55 /* ReplyCell.m */; };
+		2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DA01807E07000FC9B55 /* ReplyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +164,11 @@
 		2D224D951806E80700FC9B55 /* TopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicHeaderView.h; sourceTree = "<group>"; };
 		2D224D961806E80700FC9B55 /* TopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicHeaderView.m; sourceTree = "<group>"; };
 		2D224D981806E82100FC9B55 /* TopicHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicHeaderView.xib; sourceTree = "<group>"; };
+		2D224D9A1807E01200FC9B55 /* ReplyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyTableView.h; sourceTree = "<group>"; };
+		2D224D9B1807E01200FC9B55 /* ReplyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyTableView.m; sourceTree = "<group>"; };
+		2D224D9D1807E05A00FC9B55 /* ReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyCell.h; sourceTree = "<group>"; };
+		2D224D9E1807E05A00FC9B55 /* ReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyCell.m; sourceTree = "<group>"; };
+		2D224DA01807E07000FC9B55 /* ReplyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -399,6 +407,11 @@
 				2D224D89180690DD00FC9B55 /* TopicViewController.h */,
 				2D224D8A180690DD00FC9B55 /* TopicViewController.m */,
 				2D224D8B180690DD00FC9B55 /* TopicViewController.xib */,
+				2D224D9A1807E01200FC9B55 /* ReplyTableView.h */,
+				2D224D9B1807E01200FC9B55 /* ReplyTableView.m */,
+				2D224D9D1807E05A00FC9B55 /* ReplyCell.h */,
+				2D224D9E1807E05A00FC9B55 /* ReplyCell.m */,
+				2D224DA01807E07000FC9B55 /* ReplyCell.xib */,
 				2D224D951806E80700FC9B55 /* TopicHeaderView.h */,
 				2D224D961806E80700FC9B55 /* TopicHeaderView.m */,
 				2D224D981806E82100FC9B55 /* TopicHeaderView.xib */,
@@ -482,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
+				2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
 				2D224CEA17F96EC800FC9B55 /* Images.xcassets in Resources */,
 				2D224D991806E82100FC9B55 /* TopicHeaderView.xib in Resources */,
@@ -513,12 +527,14 @@
 				2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */,
 				2D224D2817F970E400FC9B55 /* AFPropertyListRequestOperation.m in Sources */,
 				2D224D8118068C8400FC9B55 /* SDWebImageManager.m in Sources */,
+				2D224D9F1807E05A00FC9B55 /* ReplyCell.m in Sources */,
 				2D224D7E18068C8400FC9B55 /* SDWebImageDecoder.m in Sources */,
 				2D224CE417F96EC800FC9B55 /* main.m in Sources */,
 				2D224D50180673F500FC9B55 /* TopicModel.m in Sources */,
 				2D224D8218068C8400FC9B55 /* SDWebImagePrefetcher.m in Sources */,
 				2D224D8718068C8400FC9B55 /* UIImageView+WebCache.m in Sources */,
 				2D224D59180686F500FC9B55 /* TopicCell.m in Sources */,
+				2D224D9C1807E01200FC9B55 /* ReplyTableView.m in Sources */,
 				2D224D531806744F00FC9B55 /* UserModel.m in Sources */,
 				2D224D4A18065B6F00FC9B55 /* HomeViewController.m in Sources */,
 				2D224D8418068C8400FC9B55 /* UIImage+GIF.m in Sources */,

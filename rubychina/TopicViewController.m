@@ -36,7 +36,7 @@
     
     //无数据时先隐藏tableView
     self.tableView.hidden = YES;
-    self.topicHeaderView = [[TopicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 240)];
+    self.topicHeaderView = [[TopicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 127)];
     
     
     [self requestTopicData];
@@ -72,29 +72,22 @@
                                             context:nil];
     CGSize size = frame.size;
     //重置高度
-    self.topicHeaderView.height -= 120;
+    //NSLog(@"::%.2f",self.topicHeaderView.height);
+    self.topicHeaderView.height -= 26;
     self.topicHeaderView.height += size.height;
+    //NSLog(@"--%.2f",self.topicHeaderView.height);
     
     //显示头部视图
     self.topicHeaderView.topic = self.topic;
     self.tableView.tableHeaderView = self.topicHeaderView;
     //显示tableView
     self.tableView.hidden = NO;
+    
+    self.tableView.tableData = self.topic.replies;
+    [self.tableView reloadData];
 
 }
 
-
-#pragma mark - UITableView Datasource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.tableData.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return nil;
-}
 
 - (void)didReceiveMemoryWarning
 {

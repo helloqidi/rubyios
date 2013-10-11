@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TopicModel.h"
+#import "ReplyTableView.h"
 
-@interface TopicViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface TopicViewController : UIViewController
 
 @property (nonatomic, strong) TopicModel *topic;
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet ReplyTableView *tableView;
 @end
