@@ -23,8 +23,12 @@
 @property (nonatomic, strong) NSString *updateAt;
 @property (nonatomic, strong) NSString *repliedAt;
 @property (nonatomic, strong) NSNumber *repliedCount;
+@property (nonatomic, strong) NSString *body;
+@property (nonatomic, strong) NSString *bodyHtml;
+@property (nonatomic, strong) NSNumber *hits;
 
 @property (nonatomic, strong) UserModel *user;
+@property (nonatomic, strong) NSArray *replies;
 
 
 - (id)initWithAttributes:(NSDictionary *)attributes;

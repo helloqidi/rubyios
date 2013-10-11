@@ -15,7 +15,8 @@
 
 //active topics
 #define URL_TOPIC_ACTIVE @"topics.json"
-
+//detail topic
+#define URL_TOPIC_DETAIL @"topics/%@.json"
 
 ///////////////// 社区API接口 end //////////
 

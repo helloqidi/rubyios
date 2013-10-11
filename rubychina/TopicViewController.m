@@ -7,8 +7,13 @@
 //
 
 #import "TopicViewController.h"
+#import "AFAppDotNetAPIClient.h"
+#import "TopicHeaderView.h"
 
 @interface TopicViewController ()
+
+@property (nonatomic, strong) NSArray *tableData;
+@property (nonatomic, strong) TopicHeaderView *topicHeaderView;
 
 @end
 
@@ -28,6 +33,56 @@
     [super viewDidLoad];
     
     self.title = self.topic.title;
+    
+    //无数据时先隐藏tableView
+    self.tableView.hidden = YES;
+    self.topicHeaderView = [[TopicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 240)];
+    
+    
+    [self requestTopicData];
+}
+
+- (void)requestTopicData
+{
+    NSString *path = [NSString stringWithFormat:URL_TOPIC_DETAIL,self.topic.id];
+    NSLog(@"path:%@",path);
+    [[AFAppDotNetAPIClient sharedClient] getPath:path
+                                      parameters:nil
+                                         success:^(AFHTTPRequestOperation *operation, id JSON) {
+                                             NSDictionary *jsonDic = (NSDictionary *) JSON;
+                                             [self requestTopicDataFinish:jsonDic];
+                                         }
+                                         failure:^(AFHTTPRequestOperation *operation, NSError *error){
+                                             NSLog(@"error:%@",error);
+                                         }];
+
+}
+
+- (void)requestTopicDataFinish:(NSDictionary *)jsonDic
+{
+    NSLog(@"%@",jsonDic);
+    
+    TopicModel *topic = [[TopicModel alloc] initWithAttributes:jsonDic];
+    self.topic = topic;
+    
+    //显示tableView
+    self.tableView.hidden = NO;
+    //显示头部视图
+    self.topicHeaderView.topic = self.topic;
+    self.tableView.tableHeaderView = self.topicHeaderView;
+}
+
+
+#pragma mark - UITableView Datasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tableData.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TopicModel.h"
 
-@interface TopicViewController : UIViewController
+@interface TopicViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) TopicModel *topic;
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end

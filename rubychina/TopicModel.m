@@ -7,6 +7,7 @@
 //
 
 #import "TopicModel.h"
+#import "ReplyModel.h"
 
 @implementation TopicModel
 
@@ -26,9 +27,23 @@
     _updateAt = [attributes valueForKey:@"updated_at"];
     _repliedAt = [attributes valueForKey:@"replied_at"];
     _repliedCount = [attributes valueForKey:@"replies_count"];
+    _body = [attributes valueForKey:@"body"];
+    _bodyHtml = [attributes valueForKey:@"bodyHtml"];
+    _hits = [attributes valueForKey:@"hits"];
 
     //用户信息
     _user = [[UserModel alloc] initWithAttributes:[attributes valueForKey:@"user"]];
+    
+    //回复
+    NSMutableArray *replyModels = [NSMutableArray array];
+    NSArray *replyArray = [attributes valueForKey:@"replies"];
+    if (replyArray.count > 0) {
+        for (NSDictionary *dic in replyArray) {
+            ReplyModel *replyModel = [[ReplyModel alloc] initWithAttributes:dic];
+            [replyModels addObject:replyModel];
+        }
+    }
+    _replies = replyModels;
     
     return self;
 }

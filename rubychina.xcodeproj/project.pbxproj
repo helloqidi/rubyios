@@ -54,6 +54,9 @@
 		2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D8A180690DD00FC9B55 /* TopicViewController.m */; };
 		2D224D8D180690DD00FC9B55 /* TopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224D8B180690DD00FC9B55 /* TopicViewController.xib */; };
 		2D224D911806930100FC9B55 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D901806930100FC9B55 /* UIView+Additions.m */; };
+		2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D931806E52300FC9B55 /* ReplyModel.m */; };
+		2D224D971806E80700FC9B55 /* TopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D961806E80700FC9B55 /* TopicHeaderView.m */; };
+		2D224D991806E82100FC9B55 /* TopicHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224D981806E82100FC9B55 /* TopicHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +156,11 @@
 		2D224D8B180690DD00FC9B55 /* TopicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicViewController.xib; sourceTree = "<group>"; };
 		2D224D8F1806930100FC9B55 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		2D224D901806930100FC9B55 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		2D224D921806E52300FC9B55 /* ReplyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyModel.h; sourceTree = "<group>"; };
+		2D224D931806E52300FC9B55 /* ReplyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyModel.m; sourceTree = "<group>"; };
+		2D224D951806E80700FC9B55 /* TopicHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicHeaderView.h; sourceTree = "<group>"; };
+		2D224D961806E80700FC9B55 /* TopicHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicHeaderView.m; sourceTree = "<group>"; };
+		2D224D981806E82100FC9B55 /* TopicHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +327,8 @@
 				2D224D4F180673F500FC9B55 /* TopicModel.m */,
 				2D224D511806744F00FC9B55 /* UserModel.h */,
 				2D224D521806744F00FC9B55 /* UserModel.m */,
+				2D224D921806E52300FC9B55 /* ReplyModel.h */,
+				2D224D931806E52300FC9B55 /* ReplyModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -389,6 +399,9 @@
 				2D224D89180690DD00FC9B55 /* TopicViewController.h */,
 				2D224D8A180690DD00FC9B55 /* TopicViewController.m */,
 				2D224D8B180690DD00FC9B55 /* TopicViewController.xib */,
+				2D224D951806E80700FC9B55 /* TopicHeaderView.h */,
+				2D224D961806E80700FC9B55 /* TopicHeaderView.m */,
+				2D224D981806E82100FC9B55 /* TopicHeaderView.xib */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -471,6 +484,7 @@
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
 				2D224CEA17F96EC800FC9B55 /* Images.xcassets in Resources */,
+				2D224D991806E82100FC9B55 /* TopicHeaderView.xib in Resources */,
 				2D224D8D180690DD00FC9B55 /* TopicViewController.xib in Resources */,
 				2D224D4B18065B6F00FC9B55 /* HomeViewController.xib in Resources */,
 			);
@@ -496,6 +510,7 @@
 				2D224D3117F971A600FC9B55 /* UIViewExt.m in Sources */,
 				2D224D2517F970E400FC9B55 /* AFImageRequestOperation.m in Sources */,
 				2D224CE817F96EC800FC9B55 /* AppDelegate.m in Sources */,
+				2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */,
 				2D224D2817F970E400FC9B55 /* AFPropertyListRequestOperation.m in Sources */,
 				2D224D8118068C8400FC9B55 /* SDWebImageManager.m in Sources */,
 				2D224D7E18068C8400FC9B55 /* SDWebImageDecoder.m in Sources */,
@@ -521,6 +536,7 @@
 				2D224D8318068C8400FC9B55 /* UIButton+WebCache.m in Sources */,
 				2D224D7B18068C8400FC9B55 /* NSData+GIF.m in Sources */,
 				2D224D7A18068C8400FC9B55 /* MKAnnotationView+WebCache.m in Sources */,
+				2D224D971806E80700FC9B55 /* TopicHeaderView.m in Sources */,
 				2D224D8018068C8400FC9B55 /* SDWebImageDownloaderOperation.m in Sources */,
 				2D224D2417F970E400FC9B55 /* AFHTTPRequestOperation.m in Sources */,
 				2D224D2317F970E400FC9B55 /* AFHTTPClient.m in Sources */,
