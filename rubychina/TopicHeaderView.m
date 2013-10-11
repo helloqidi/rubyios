@@ -34,6 +34,7 @@
     
     //描述
     self.bodyLabel.text = self.topic.body;
+    [self.bodyLabel sizeToFit];
 }
 
 @end

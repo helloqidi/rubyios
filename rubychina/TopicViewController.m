@@ -45,7 +45,6 @@
 - (void)requestTopicData
 {
     NSString *path = [NSString stringWithFormat:URL_TOPIC_DETAIL,self.topic.id];
-    NSLog(@"path:%@",path);
     [[AFAppDotNetAPIClient sharedClient] getPath:path
                                       parameters:nil
                                          success:^(AFHTTPRequestOperation *operation, id JSON) {
@@ -60,16 +59,28 @@
 
 - (void)requestTopicDataFinish:(NSDictionary *)jsonDic
 {
-    NSLog(@"%@",jsonDic);
-    
     TopicModel *topic = [[TopicModel alloc] initWithAttributes:jsonDic];
     self.topic = topic;
     
-    //显示tableView
-    self.tableView.hidden = NO;
+    //获得描述的高度
+    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                          [UIFont systemFontOfSize:17.0f], NSFontAttributeName,
+                                          nil];
+    CGRect frame = [self.topic.body boundingRectWithSize:CGSizeMake(304, MAXFLOAT)
+                                            options:NSStringDrawingUsesLineFragmentOrigin
+                                         attributes:attributesDictionary
+                                            context:nil];
+    CGSize size = frame.size;
+    //重置高度
+    self.topicHeaderView.height -= 120;
+    self.topicHeaderView.height += size.height;
+    
     //显示头部视图
     self.topicHeaderView.topic = self.topic;
     self.tableView.tableHeaderView = self.topicHeaderView;
+    //显示tableView
+    self.tableView.hidden = NO;
+
 }
 
 
