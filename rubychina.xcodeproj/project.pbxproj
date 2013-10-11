@@ -60,6 +60,7 @@
 		2D224D9C1807E01200FC9B55 /* ReplyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D9B1807E01200FC9B55 /* ReplyTableView.m */; };
 		2D224D9F1807E05A00FC9B55 /* ReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D9E1807E05A00FC9B55 /* ReplyCell.m */; };
 		2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DA01807E07000FC9B55 /* ReplyCell.xib */; };
+		2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DA31807EFF000FC9B55 /* UIUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,8 @@
 		2D224D9D1807E05A00FC9B55 /* ReplyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplyCell.h; sourceTree = "<group>"; };
 		2D224D9E1807E05A00FC9B55 /* ReplyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplyCell.m; sourceTree = "<group>"; };
 		2D224DA01807E07000FC9B55 /* ReplyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplyCell.xib; sourceTree = "<group>"; };
+		2D224DA21807EFF000FC9B55 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		2D224DA31807EFF000FC9B55 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +292,8 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2D224DA21807EFF000FC9B55 /* UIUtils.h */,
+				2D224DA31807EFF000FC9B55 /* UIUtils.m */,
 				2D224D8F1806930100FC9B55 /* UIView+Additions.h */,
 				2D224D901806930100FC9B55 /* UIView+Additions.m */,
 				2D224D2F17F971A600FC9B55 /* UIViewExt.h */,
@@ -542,6 +547,7 @@
 				2D224D2917F970E400FC9B55 /* AFURLConnectionOperation.m in Sources */,
 				2D224D7D18068C8400FC9B55 /* SDWebImageCompat.m in Sources */,
 				2D224D2A17F970E400FC9B55 /* AFXMLRequestOperation.m in Sources */,
+				2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */,
 				2D224D2617F970E400FC9B55 /* AFJSONRequestOperation.m in Sources */,
 				2D224D7C18068C8400FC9B55 /* SDImageCache.m in Sources */,
 				2D224D7F18068C8400FC9B55 /* SDWebImageDownloader.m in Sources */,

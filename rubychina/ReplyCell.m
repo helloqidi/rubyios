@@ -8,6 +8,7 @@
 
 #import "ReplyCell.h"
 #import "UIImageView+WebCache.h"
+#import "UIUtils.h"
 
 @implementation ReplyCell
 
@@ -38,6 +39,6 @@
     self.loginLabel.text = self.reply.user.login;
     
     //回复时间
-    self.createAtLabel.text = self.reply.createdAt;
+    self.createAtLabel.text = [UIUtils formatRubyChinaString:self.reply.createdAt];
 }
 @end
