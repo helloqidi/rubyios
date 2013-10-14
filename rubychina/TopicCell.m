@@ -8,6 +8,7 @@
 
 #import "TopicCell.h"
 #import "UIImageView+WebCache.h"
+#import "UIUtils.h"
 
 @implementation TopicCell
 
@@ -32,6 +33,12 @@
     
     //标题
     self.titleLabel.text = self.topic.title;
+    
+    //用户名
+    self.loginLabel.text = self.topic.user.login;
+    
+    //创建时间
+    self.createdAtLabel.text = [UIUtils formatRubyChinaString:self.topic.createdAt];
 
 }
 

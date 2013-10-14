@@ -12,6 +12,11 @@
 
 @interface HomeViewController ()
 
+//所有的话题
+@property (nonatomic,retain) NSMutableArray *topics;
+//已请求了第几页的数据
+@property (nonatomic, assign) int lastPage;
+
 @end
 
 @implementation HomeViewController
@@ -29,7 +34,11 @@
 {
     [super viewDidLoad];
     
-    [self requestTopicData];
+    //初始化相关变量
+    self.lastPage = 0;
+    self.topics = [NSMutableArray array];
+    
+    [self initRequestTopicData];
     
     [self initTableViewPullRefresh];
 }
@@ -54,22 +63,36 @@
 //下拉
 - (void)insertRowAtTop
 {
+    [self initRequestTopicData];
+    
     __weak HomeViewController *weakSelf = self;
-    NSLog(@"up...");
     [weakSelf.tableView.pullToRefreshView stopAnimating];
 }
 
-//上拉
+//滚动加载
 - (void)insertRowAtBottom
 {
+    int thePage = self.lastPage + 1;
+    NSString *lastPage = [NSString stringWithFormat:@"%i",thePage];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:lastPage,@"page", nil];
+    
+    [[AFAppDotNetAPIClient sharedClient] getPath:URL_TOPIC_ACTIVE
+                                      parameters:params
+                                         success:^(AFHTTPRequestOperation *operation, id JSON) {
+                                             NSArray *jsonArray = (NSArray *) JSON;
+                                             [self requestTopicDataFinish:jsonArray];
+                                         }
+                                         failure:^(AFHTTPRequestOperation *operation, NSError *error){
+                                             NSLog(@"error:%@",error);
+                                         }];
+    
     __weak HomeViewController *weakSelf = self;
-    NSLog(@"down...");
     [weakSelf.tableView.infiniteScrollingView stopAnimating];
 }
 
-
-//请求话题数据
-- (void)requestTopicData
+//初始请求话题数据
+- (void)initRequestTopicData
 {
     [[AFAppDotNetAPIClient sharedClient] getPath:URL_TOPIC_ACTIVE
                                       parameters:nil
@@ -91,9 +114,14 @@
         [topics addObject:topicModel];
     }
     
-    self.tableView.tableData = topics;
+    //追加数组
+    [self.topics addObjectsFromArray:topics];
+    self.tableView.tableData = self.topics;
     
     [self.tableView reloadData];
+    
+    //初始化页数
+    self.lastPage += 1;
 }
 
 

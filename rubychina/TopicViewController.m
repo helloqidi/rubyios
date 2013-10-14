@@ -8,10 +8,10 @@
 
 #import "TopicViewController.h"
 #import "TopicHeaderView.h"
+#import "SVPullToRefresh.h"
 
 @interface TopicViewController ()
 
-@property (nonatomic, strong) NSArray *tableData;
 @property (nonatomic, strong) TopicHeaderView *topicHeaderView;
 
 @end
