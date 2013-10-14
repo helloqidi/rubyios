@@ -63,6 +63,7 @@
 		2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DA31807EFF000FC9B55 /* UIUtils.m */; };
 		2D224DAB1809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */; };
 		2D224DAC1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */; };
+		2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		2D224DA91809179700FC9B55 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHLGlobalUICommon.h; sourceTree = "<group>"; };
+		2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHLGlobalUICommon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +438,8 @@
 		2D224DA51809179700FC9B55 /* SVPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */,
+				2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */,
 				2D224DA61809179700FC9B55 /* SVPullToRefresh.h */,
 				2D224DA71809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.h */,
 				2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */,
@@ -576,6 +581,7 @@
 				2D224D2B17F970E400FC9B55 /* UIImageView+AFNetworking.m in Sources */,
 				2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */,
 				2D224D8518068C8400FC9B55 /* UIImage+MultiFormat.m in Sources */,
 				2D224D8318068C8400FC9B55 /* UIButton+WebCache.m in Sources */,
 				2D224D7B18068C8400FC9B55 /* NSData+GIF.m in Sources */,

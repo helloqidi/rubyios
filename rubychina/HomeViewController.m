@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "TopicModel.h"
+#import "SVPullToRefresh.h"
 
 @interface HomeViewController ()
 
@@ -29,6 +30,41 @@
     [super viewDidLoad];
     
     [self requestTopicData];
+    
+    [self initTableViewPullRefresh];
+}
+
+
+- (void)initTableViewPullRefresh
+{
+    //处理iOS7的兼容问题
+    float version = WXHLOSVersion();
+    if (version >= 7.0) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    __weak HomeViewController *weakSelf = self;
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        [weakSelf insertRowAtTop];
+    }];
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        [weakSelf insertRowAtBottom];
+    }];
+}
+
+//下拉
+- (void)insertRowAtTop
+{
+    __weak HomeViewController *weakSelf = self;
+    NSLog(@"up...");
+    [weakSelf.tableView.pullToRefreshView stopAnimating];
+}
+
+//上拉
+- (void)insertRowAtBottom
+{
+    __weak HomeViewController *weakSelf = self;
+    NSLog(@"down...");
+    [weakSelf.tableView.infiniteScrollingView stopAnimating];
 }
 
 

@@ -10,7 +10,6 @@
 #import "TopicModel.h"
 #import "TopicCell.h"
 #import "TopicViewController.h"
-#import "SVPullToRefresh.h"
 
 @implementation TopicTableView
 
@@ -32,65 +31,9 @@
 }
 
 - (void)initView
-{
+{    
     self.dataSource = self;
     self.delegate = self;
-    
-    [self initPullRefresh];
-}
-
-- (void)initPullRefresh
-{
-    __weak TopicTableView *weakSelf = self;
-    
-    // setup pull-to-refresh
-    [self addPullToRefreshWithActionHandler:^{
-        [weakSelf insertRowAtTop];
-    }];
-    
-    // setup infinite scrolling
-    [self addInfiniteScrollingWithActionHandler:^{
-        [weakSelf insertRowAtBottom];
-    }];
-}
-
-- (void)insertRowAtTop
-{
-    __weak TopicTableView *weakSelf = self;
-    
-//    int64_t delayInSeconds = 2.0;
-//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-//        [weakSelf beginUpdates];
-//        //
-//        // do something
-//        //
-//        NSLog(@"top...");
-//        [weakSelf endUpdates];
-//        
-//        [weakSelf.pullToRefreshView stopAnimating];
-//    });
-    NSLog(@"111");
-    [weakSelf reloadData];
-    [weakSelf.pullToRefreshView stopAnimating];
-}
-
-- (void)insertRowAtBottom
-{
-    __weak TopicTableView *weakSelf = self;
-    
-    int64_t delayInSeconds = 2.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [weakSelf beginUpdates];
-        //
-        // do something
-        //
-        NSLog(@"bottom!!");
-        [weakSelf endUpdates];
-        
-        [weakSelf.infiniteScrollingView stopAnimating];
-    });
 }
 
 #pragma mark - UITableView Datasource

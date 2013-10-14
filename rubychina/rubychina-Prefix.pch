@@ -17,4 +17,5 @@
     #import "AFAppDotNetAPIClient.h"
     #import "UIViewExt.h"
     #import "UIView+Additions.h"
+    #import "WXHLGlobalUICommon.h"
 #endif
