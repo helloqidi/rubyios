@@ -64,6 +64,8 @@
 		2D224DAB1809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */; };
 		2D224DAC1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */; };
 		2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */; };
+		2D224DB2180BF30B00FC9B55 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DB1180BF30B00FC9B55 /* CommentView.m */; };
+		2D224DB4180BF31D00FC9B55 /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DB3180BF31D00FC9B55 /* CommentView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,9 @@
 		2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHLGlobalUICommon.h; sourceTree = "<group>"; };
 		2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHLGlobalUICommon.m; sourceTree = "<group>"; };
+		2D224DB0180BF30B00FC9B55 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		2D224DB1180BF30B00FC9B55 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		2D224DB3180BF31D00FC9B55 /* CommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,6 +436,9 @@
 				2D224D951806E80700FC9B55 /* TopicHeaderView.h */,
 				2D224D961806E80700FC9B55 /* TopicHeaderView.m */,
 				2D224D981806E82100FC9B55 /* TopicHeaderView.xib */,
+				2D224DB0180BF30B00FC9B55 /* CommentView.h */,
+				2D224DB1180BF30B00FC9B55 /* CommentView.m */,
+				2D224DB3180BF31D00FC9B55 /* CommentView.xib */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -530,6 +538,7 @@
 				2D224CEA17F96EC800FC9B55 /* Images.xcassets in Resources */,
 				2D224D991806E82100FC9B55 /* TopicHeaderView.xib in Resources */,
 				2D224D8D180690DD00FC9B55 /* TopicViewController.xib in Resources */,
+				2D224DB4180BF31D00FC9B55 /* CommentView.xib in Resources */,
 				2D224D4B18065B6F00FC9B55 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +582,7 @@
 				2D224D8618068C8400FC9B55 /* UIImage+WebP.m in Sources */,
 				2D224D2917F970E400FC9B55 /* AFURLConnectionOperation.m in Sources */,
 				2D224D7D18068C8400FC9B55 /* SDWebImageCompat.m in Sources */,
+				2D224DB2180BF30B00FC9B55 /* CommentView.m in Sources */,
 				2D224D2A17F970E400FC9B55 /* AFXMLRequestOperation.m in Sources */,
 				2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */,
 				2D224D2617F970E400FC9B55 /* AFJSONRequestOperation.m in Sources */,

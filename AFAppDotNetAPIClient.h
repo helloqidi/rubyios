@@ -26,5 +26,6 @@
 @interface AFAppDotNetAPIClient : AFHTTPClient
 
 + (AFAppDotNetAPIClient *)sharedClient;
++ (AFAppDotNetAPIClient *)sharedClientNoJson;
 
 @end

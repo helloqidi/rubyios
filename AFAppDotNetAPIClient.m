@@ -32,24 +32,36 @@ static NSString * const kAFAppDotNetAPIBaseURLString = BASE_URL;
     static AFAppDotNetAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kAFAppDotNetAPIBaseURLString]];
+        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kAFAppDotNetAPIBaseURLString] ifJson:YES];
     });
     
     return _sharedClient;
 }
 
-- (id)initWithBaseURL:(NSURL *)url {
++ (AFAppDotNetAPIClient *)sharedClientNoJson {
+    static AFAppDotNetAPIClient *_sharedClient = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kAFAppDotNetAPIBaseURLString] ifJson:NO];
+    });
+    
+    return _sharedClient;
+}
+
+- (id)initWithBaseURL:(NSURL *)url ifJson:(BOOL)ifJson {
     self = [super initWithBaseURL:url];
     if (!self) {
         return nil;
     }
+  
+    //默认是 AFHTTPRequestOperation
+    if (ifJson == YES) {
+        [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    }
     
-    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     
-    // Accept HTTP Header; see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1
 	[self setDefaultHeader:@"Accept" value:@"application/json"];
 
-    // By default, the example ships with SSL pinning enabled for the app.net API pinned against the public key of adn.cer file included with the example. In order to make it easier for developers who are new to AFNetworking, SSL pinning is automatically disabled if the base URL has been changed. This will allow developers to hack around with the example, without getting tripped up by SSL pinning.
     if ([[url scheme] isEqualToString:@"https"] && [[url host] isEqualToString:@"alpha-api.app.net"]) {
         self.defaultSSLPinningMode = AFSSLPinningModePublicKey;
     } else {

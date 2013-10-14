@@ -69,28 +69,8 @@
     [weakSelf.tableView.pullToRefreshView stopAnimating];
 }
 
-//滚动加载
-- (void)insertRowAtBottom
-{
-    int thePage = self.lastPage + 1;
-    NSString *lastPage = [NSString stringWithFormat:@"%i",thePage];
-    
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:lastPage,@"page", nil];
-    
-    [[AFAppDotNetAPIClient sharedClient] getPath:URL_TOPIC_ACTIVE
-                                      parameters:params
-                                         success:^(AFHTTPRequestOperation *operation, id JSON) {
-                                             NSArray *jsonArray = (NSArray *) JSON;
-                                             [self requestTopicDataFinish:jsonArray];
-                                         }
-                                         failure:^(AFHTTPRequestOperation *operation, NSError *error){
-                                             NSLog(@"error:%@",error);
-                                         }];
-    
-    __weak HomeViewController *weakSelf = self;
-    [weakSelf.tableView.infiniteScrollingView stopAnimating];
-}
 
+#pragma mark - data
 //初始请求话题数据
 - (void)initRequestTopicData
 {
@@ -124,8 +104,30 @@
     self.lastPage += 1;
 }
 
+//滚动加载
+- (void)insertRowAtBottom
+{
+    int thePage = self.lastPage + 1;
+    NSString *lastPage = [NSString stringWithFormat:@"%i",thePage];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:lastPage,@"page", nil];
+    
+    [[AFAppDotNetAPIClient sharedClient] getPath:URL_TOPIC_ACTIVE
+                                      parameters:params
+                                         success:^(AFHTTPRequestOperation *operation, id JSON) {
+                                             NSArray *jsonArray = (NSArray *) JSON;
+                                             [self requestTopicDataFinish:jsonArray];
+                                         }
+                                         failure:^(AFHTTPRequestOperation *operation, NSError *error){
+                                             NSLog(@"error:%@",error);
+                                         }];
+    
+    __weak HomeViewController *weakSelf = self;
+    [weakSelf.tableView.infiniteScrollingView stopAnimating];
+}
 
 
+#pragma mark - dealloc
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -12,11 +12,15 @@
 ///////////////// 社区API接口 start //////////
 // API Domain
 #define BASE_URL @"http://ruby-china.org/api/"
+// 个人特别token
+#define MY_TOKEN @"053f71974c3d1a731b6f:580"
 
 //active topics
 #define URL_TOPIC_ACTIVE @"topics.json"
-//detail topic
+//话题详情
 #define URL_TOPIC_DETAIL @"topics/%@.json"
+//发布评论
+#define URL_CREATE_REPLY @"topics/%@/replies.json"
 
 ///////////////// 社区API接口 end //////////
 
