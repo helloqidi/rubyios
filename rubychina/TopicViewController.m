@@ -7,7 +7,6 @@
 //
 
 #import "TopicViewController.h"
-#import "AFAppDotNetAPIClient.h"
 #import "TopicHeaderView.h"
 
 @interface TopicViewController ()

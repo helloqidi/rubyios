@@ -61,6 +61,8 @@
 		2D224D9F1807E05A00FC9B55 /* ReplyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224D9E1807E05A00FC9B55 /* ReplyCell.m */; };
 		2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DA01807E07000FC9B55 /* ReplyCell.xib */; };
 		2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DA31807EFF000FC9B55 /* UIUtils.m */; };
+		2D224DAB1809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */; };
+		2D224DAC1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +174,11 @@
 		2D224DA01807E07000FC9B55 /* ReplyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplyCell.xib; sourceTree = "<group>"; };
 		2D224DA21807EFF000FC9B55 /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
 		2D224DA31807EFF000FC9B55 /* UIUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		2D224DA61809179700FC9B55 /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		2D224DA71809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		2D224DA91809179700FC9B55 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +299,7 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2D224DA51809179700FC9B55 /* SVPullToRefresh */,
 				2D224DA21807EFF000FC9B55 /* UIUtils.h */,
 				2D224DA31807EFF000FC9B55 /* UIUtils.m */,
 				2D224D8F1806930100FC9B55 /* UIView+Additions.h */,
@@ -424,6 +432,18 @@
 			name = Topic;
 			sourceTree = "<group>";
 		};
+		2D224DA51809179700FC9B55 /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				2D224DA61809179700FC9B55 /* SVPullToRefresh.h */,
+				2D224DA71809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.h */,
+				2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */,
+				2D224DA91809179700FC9B55 /* UIScrollView+SVPullToRefresh.h */,
+				2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,10 +544,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D224DAC1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				2D224D911806930100FC9B55 /* UIView+Additions.m in Sources */,
 				2D224D56180681AF00FC9B55 /* TopicTableView.m in Sources */,
 				2D224D3117F971A600FC9B55 /* UIViewExt.m in Sources */,
 				2D224D2517F970E400FC9B55 /* AFImageRequestOperation.m in Sources */,
+				2D224DAB1809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				2D224CE817F96EC800FC9B55 /* AppDelegate.m in Sources */,
 				2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */,
 				2D224D2817F970E400FC9B55 /* AFPropertyListRequestOperation.m in Sources */,
