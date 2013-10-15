@@ -59,7 +59,12 @@
                                    MY_TOKEN,
                                    @"token", nil];
     
-    [[AFAppDotNetAPIClient sharedClientNoJson] postPath:nil //URL_TOPIC_ACTIVE
+    //暂时先不上传，为了保证网站内容质量
+    NSLog(@"%@",params);
+    [self.navigationController popViewControllerAnimated:YES];
+    return;
+    
+    [[AFAppDotNetAPIClient sharedClientNoJson] postPath:URL_TOPIC_ACTIVE
                                              parameters:params
                                                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                                     NSLog(@"return : %@",operation.responseString);
@@ -133,7 +138,7 @@
         self.titleField = [[UITextField alloc] initWithFrame:CGRectMake(titleLabel.right
                                                                         +2, 4, 250, 40)];
         self.titleField.font = [UIFont systemFontOfSize:12.0f];
-        self.titleField.backgroundColor = [UIColor lightGrayColor];
+        //self.titleField.backgroundColor = [UIColor lightGrayColor];
         [cell.contentView addSubview:self.titleField];
     }
     
@@ -145,7 +150,7 @@
         self.bodyTextView = [[UITextView alloc] initWithFrame:CGRectMake(titleLabel.right
                                                                         +2, 4, 250, 80)];
         self.bodyTextView.font = [UIFont systemFontOfSize:12.0f];
-        self.bodyTextView.backgroundColor = [UIColor lightGrayColor];
+        //self.bodyTextView.backgroundColor = [UIColor lightGrayColor];
         [cell.contentView addSubview:self.bodyTextView];
     }
     
