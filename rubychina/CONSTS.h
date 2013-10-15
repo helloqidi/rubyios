@@ -15,12 +15,14 @@
 // 个人特别token
 #define MY_TOKEN @"053f71974c3d1a731b6f:580"
 
-//active topics
+//话题列表 / 发布话题
 #define URL_TOPIC_ACTIVE @"topics.json"
 //话题详情
 #define URL_TOPIC_DETAIL @"topics/%@.json"
 //发布评论
 #define URL_CREATE_REPLY @"topics/%@/replies.json"
+//所有节点
+#define URL_NODE_ALL @"nodes.json"
 
 ///////////////// 社区API接口 end //////////
 

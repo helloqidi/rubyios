@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "TopicModel.h"
 #import "SVPullToRefresh.h"
+#import "SendViewController.h"
 
 @interface HomeViewController ()
 
@@ -38,11 +39,18 @@
     self.lastPage = 0;
     self.topics = [NSMutableArray array];
     
+    [self initBarButtonItems];
+    
     [self initRequestTopicData];
     
     [self initTableViewPullRefresh];
 }
 
+- (void)initBarButtonItems
+{
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(sendAction)];
+    self.navigationItem.leftBarButtonItem =leftItem;
+}
 
 - (void)initTableViewPullRefresh
 {
@@ -126,6 +134,12 @@
     [weakSelf.tableView.infiniteScrollingView stopAnimating];
 }
 
+#pragma mark - action
+- (void)sendAction
+{
+    SendViewController *sendCtrl = [[SendViewController alloc] init];
+    [self.navigationController pushViewController:sendCtrl animated:YES];
+}
 
 #pragma mark - dealloc
 - (void)didReceiveMemoryWarning

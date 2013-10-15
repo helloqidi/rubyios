@@ -66,6 +66,15 @@
 		2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */; };
 		2D224DB2180BF30B00FC9B55 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DB1180BF30B00FC9B55 /* CommentView.m */; };
 		2D224DB4180BF31D00FC9B55 /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DB3180BF31D00FC9B55 /* CommentView.xib */; };
+		2D224DB8180C3F4C00FC9B55 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DB6180C3F4C00FC9B55 /* SendViewController.m */; };
+		2D224DB9180C3F4C00FC9B55 /* SendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DB7180C3F4C00FC9B55 /* SendViewController.xib */; };
+		2D224DBD180C464E00FC9B55 /* NodeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DBB180C464E00FC9B55 /* NodeSelectViewController.m */; };
+		2D224DBE180C464E00FC9B55 /* NodeSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D224DBC180C464E00FC9B55 /* NodeSelectViewController.xib */; };
+		2D224DC1180CDA5B00FC9B55 /* NodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D224DC0180CDA5B00FC9B55 /* NodeModel.m */; };
+		2DD3D6DC180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6D5180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m */; };
+		2DD3D6DD180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6D7180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m */; };
+		2DD3D6DE180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6D9180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m */; };
+		2DD3D6DF180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6DB180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +196,22 @@
 		2D224DB0180BF30B00FC9B55 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
 		2D224DB1180BF30B00FC9B55 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
 		2D224DB3180BF31D00FC9B55 /* CommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		2D224DB5180C3F4C00FC9B55 /* SendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		2D224DB6180C3F4C00FC9B55 /* SendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
+		2D224DB7180C3F4C00FC9B55 /* SendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendViewController.xib; sourceTree = "<group>"; };
+		2D224DBA180C464E00FC9B55 /* NodeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeSelectViewController.h; sourceTree = "<group>"; };
+		2D224DBB180C464E00FC9B55 /* NodeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeSelectViewController.m; sourceTree = "<group>"; };
+		2D224DBC180C464E00FC9B55 /* NodeSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NodeSelectViewController.xib; sourceTree = "<group>"; };
+		2D224DBF180CDA5B00FC9B55 /* NodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeModel.h; sourceTree = "<group>"; };
+		2D224DC0180CDA5B00FC9B55 /* NodeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeModel.m; sourceTree = "<group>"; };
+		2DD3D6D4180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		2DD3D6D5180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		2DD3D6D6180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		2DD3D6D7180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		2DD3D6D8180D3EBD001AE925 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		2DD3D6D9180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		2DD3D6DA180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		2DD3D6DB180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +332,7 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D6D3180D3EBD001AE925 /* TPKeyboardAvoiding */,
 				2D224DA51809179700FC9B55 /* SVPullToRefresh */,
 				2D224DA21807EFF000FC9B55 /* UIUtils.h */,
 				2D224DA31807EFF000FC9B55 /* UIUtils.m */,
@@ -358,6 +384,8 @@
 				2D224D521806744F00FC9B55 /* UserModel.m */,
 				2D224D921806E52300FC9B55 /* ReplyModel.h */,
 				2D224D931806E52300FC9B55 /* ReplyModel.m */,
+				2D224DBF180CDA5B00FC9B55 /* NodeModel.h */,
+				2D224DC0180CDA5B00FC9B55 /* NodeModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -439,6 +467,12 @@
 				2D224DB0180BF30B00FC9B55 /* CommentView.h */,
 				2D224DB1180BF30B00FC9B55 /* CommentView.m */,
 				2D224DB3180BF31D00FC9B55 /* CommentView.xib */,
+				2D224DB5180C3F4C00FC9B55 /* SendViewController.h */,
+				2D224DB6180C3F4C00FC9B55 /* SendViewController.m */,
+				2D224DB7180C3F4C00FC9B55 /* SendViewController.xib */,
+				2D224DBA180C464E00FC9B55 /* NodeSelectViewController.h */,
+				2D224DBB180C464E00FC9B55 /* NodeSelectViewController.m */,
+				2D224DBC180C464E00FC9B55 /* NodeSelectViewController.xib */,
 			);
 			name = Topic;
 			sourceTree = "<group>";
@@ -455,6 +489,21 @@
 				2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */,
 			);
 			path = SVPullToRefresh;
+			sourceTree = "<group>";
+		};
+		2DD3D6D3180D3EBD001AE925 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6D4180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.h */,
+				2DD3D6D5180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m */,
+				2DD3D6D6180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.h */,
+				2DD3D6D7180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m */,
+				2DD3D6D8180D3EBD001AE925 /* TPKeyboardAvoidingTableView.h */,
+				2DD3D6D9180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m */,
+				2DD3D6DA180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				2DD3D6DB180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -540,6 +589,8 @@
 				2D224D8D180690DD00FC9B55 /* TopicViewController.xib in Resources */,
 				2D224DB4180BF31D00FC9B55 /* CommentView.xib in Resources */,
 				2D224D4B18065B6F00FC9B55 /* HomeViewController.xib in Resources */,
+				2D224DBE180C464E00FC9B55 /* NodeSelectViewController.xib in Resources */,
+				2D224DB9180C3F4C00FC9B55 /* SendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,10 +613,13 @@
 				2D224D911806930100FC9B55 /* UIView+Additions.m in Sources */,
 				2D224D56180681AF00FC9B55 /* TopicTableView.m in Sources */,
 				2D224D3117F971A600FC9B55 /* UIViewExt.m in Sources */,
+				2D224DC1180CDA5B00FC9B55 /* NodeModel.m in Sources */,
 				2D224D2517F970E400FC9B55 /* AFImageRequestOperation.m in Sources */,
 				2D224DAB1809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				2D224CE817F96EC800FC9B55 /* AppDelegate.m in Sources */,
 				2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */,
+				2DD3D6DE180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m in Sources */,
+				2DD3D6DD180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				2D224D2817F970E400FC9B55 /* AFPropertyListRequestOperation.m in Sources */,
 				2D224D8118068C8400FC9B55 /* SDWebImageManager.m in Sources */,
 				2D224D9F1807E05A00FC9B55 /* ReplyCell.m in Sources */,
@@ -579,17 +633,21 @@
 				2D224D531806744F00FC9B55 /* UserModel.m in Sources */,
 				2D224D4A18065B6F00FC9B55 /* HomeViewController.m in Sources */,
 				2D224D8418068C8400FC9B55 /* UIImage+GIF.m in Sources */,
+				2DD3D6DC180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				2D224D8618068C8400FC9B55 /* UIImage+WebP.m in Sources */,
 				2D224D2917F970E400FC9B55 /* AFURLConnectionOperation.m in Sources */,
 				2D224D7D18068C8400FC9B55 /* SDWebImageCompat.m in Sources */,
 				2D224DB2180BF30B00FC9B55 /* CommentView.m in Sources */,
+				2DD3D6DF180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				2D224D2A17F970E400FC9B55 /* AFXMLRequestOperation.m in Sources */,
+				2D224DBD180C464E00FC9B55 /* NodeSelectViewController.m in Sources */,
 				2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */,
 				2D224D2617F970E400FC9B55 /* AFJSONRequestOperation.m in Sources */,
 				2D224D7C18068C8400FC9B55 /* SDImageCache.m in Sources */,
 				2D224D7F18068C8400FC9B55 /* SDWebImageDownloader.m in Sources */,
 				2D224D2B17F970E400FC9B55 /* UIImageView+AFNetworking.m in Sources */,
 				2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */,
+				2D224DB8180C3F4C00FC9B55 /* SendViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */,
 				2D224D8518068C8400FC9B55 /* UIImage+MultiFormat.m in Sources */,
