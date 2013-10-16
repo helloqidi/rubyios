@@ -23,4 +23,7 @@
 //格式化这样的日期: 2013-10-11T16:28:37.005+08:00 形成新的日期: 08-01 12:30
 + (NSString *)formatRubyChinaString:(NSString *)datestring;
 
+//识别文本中的超链接
++ (NSString *)parseLink:(NSString *)text;
+
 @end

@@ -8,6 +8,8 @@
 
 #import "UIUtils.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "RegexKitLite.h"
+#import "NSString+URLEncoding.h"
 
 @implementation UIUtils
 
@@ -55,5 +57,28 @@
     return text;
     
 }
+
++ (NSString *)parseLink:(NSString *)text {
+    // regular expresion
+    NSString *regex = @"([a-zA-z]+://[^\\s]*)";
+    NSArray *matchArray = [text componentsMatchedByRegex:regex];
+    
+    for (NSString *linkString in matchArray) {
+        
+        //形成超链接
+        // <a href='http://www.baidu.com'>http://www.baidu.com</a>
+        NSString *replacement = nil;
+        if ([linkString hasPrefix:@"http"]) {
+            replacement = [NSString stringWithFormat:@"<a href='%@'>%@</a>", [linkString URLEncodedString], linkString];
+        }
+        
+        if (replacement) {
+            text = [text stringByReplacingOccurrencesOfString:linkString withString:replacement];
+        }
+        
+    }
+    return text;
+}
+
 
 @end

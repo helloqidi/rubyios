@@ -9,6 +9,9 @@
 #import "TopicHeaderView.h"
 #import "UIImageView+WebCache.h"
 #import "PersonViewController.h"
+#import "UIUtils.h"
+#import "WebViewController.h"
+#import "NSString+URLEncoding.h"
 
 @implementation TopicHeaderView
 
@@ -21,6 +24,7 @@
     }
     return self;
 }
+
 
 - (void)layoutSubviews
 {
@@ -40,8 +44,25 @@
     };
     
     //描述
-    self.bodyLabel.text = self.topic.body;
-    [self.bodyLabel sizeToFit];
+    self.bodyLabel = [[RTLabel alloc] initWithFrame:CGRectMake(self.titleLabel.left, self.titleLabel.bottom+5, 304, 0)];
+    self.bodyLabel.delegate = self;
+    NSString *parseText = [UIUtils parseLink:self.topic.body];
+    [self.bodyLabel setText:parseText];
+    //获得高度(20是根据情况调整的高度)
+    float contentHeight = self.bodyLabel.optimumSize.height+20;
+    //重置高度
+    self.bodyLabel.height = contentHeight;
+    [self addSubview:self.bodyLabel];
+}
+
+#pragma mark - RTLabel delegate
+- (void)rtLabel:(id)rtLabel didSelectLinkWithURL:(NSURL*)url {
+    NSString *urlstring = [[url absoluteString] URLDecodedString];
+    if ([urlstring hasPrefix:@"http"]) {
+        
+        WebViewController *webView = [[WebViewController alloc] initWithUrl:urlstring];
+        [self.viewController.navigationController pushViewController:webView animated:YES];
+    }
 }
 
 @end

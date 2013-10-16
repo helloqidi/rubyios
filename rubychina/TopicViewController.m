@@ -50,7 +50,7 @@
 {
     //无数据时先隐藏tableView
     self.tableView.hidden = YES;
-    self.topicHeaderView = [[TopicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 127)];
+    self.topicHeaderView = [[TopicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 89)];
     
     
     //评论框
@@ -87,19 +87,23 @@
     self.topic = topic;
     
     //获得描述的高度
-    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                          [UIFont systemFontOfSize:17.0f], NSFontAttributeName,
-                                          nil];
-    CGRect frame = [self.topic.body boundingRectWithSize:CGSizeMake(304, MAXFLOAT)
-                                            options:NSStringDrawingUsesLineFragmentOrigin
-                                         attributes:attributesDictionary
-                                            context:nil];
-    CGSize size = frame.size;
+    RTLabel *label = [[RTLabel alloc] initWithFrame:CGRectMake(0, 0, 304, 0)];
+    [label setText:self.topic.body];
+    //获得高度(20是根据情况调整的高度)
+    float contentHeight = label.optimumSize.height+20;
+    
+//    NSDictionary *attributesDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+//                                          [UIFont systemFontOfSize:17.0f], NSFontAttributeName,
+//                                          nil];
+//    CGRect frame = [self.topic.body boundingRectWithSize:CGSizeMake(304, MAXFLOAT)
+//                                            options:NSStringDrawingUsesLineFragmentOrigin
+//                                         attributes:attributesDictionary
+//                                            context:nil];
+//    CGSize size = frame.size;
+//    self.topicHeaderView.height += size.height;
+    
     //重置高度
-    //NSLog(@"::%.2f",self.topicHeaderView.height);
-    self.topicHeaderView.height -= 26;
-    self.topicHeaderView.height += size.height;
-    //NSLog(@"--%.2f",self.topicHeaderView.height);
+    self.topicHeaderView.height += contentHeight;
     
     //显示头部视图
     self.topicHeaderView.topic = self.topic;

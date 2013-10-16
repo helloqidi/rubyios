@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "TopicModel.h"
 #import "InterfaceImageView.h"
+#import "RTLabel.h"
 
-@interface TopicHeaderView : UIView
+@interface TopicHeaderView : UIView <RTLabelDelegate>
 
 @property (nonatomic, strong) TopicModel *topic;
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet InterfaceImageView *avatarImage;
 
-@property (strong, nonatomic) IBOutlet UILabel *bodyLabel;
+@property (nonatomic, strong) RTLabel *bodyLabel;
 
 @end

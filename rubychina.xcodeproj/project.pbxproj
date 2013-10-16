@@ -84,6 +84,11 @@
 		2DD3D6F7180E7592001AE925 /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F6180E7592001AE925 /* RTLabel.m */; };
 		2DD3D6FA180E78D3001AE925 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F8180E78D3001AE925 /* Icon-114.png */; };
 		2DD3D6FB180E78D3001AE925 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F9180E78D3001AE925 /* Icon.png */; };
+		2DD3D701180E82CC001AE925 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6FF180E82CC001AE925 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2DD3D703180E8362001AE925 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3D702180E8362001AE925 /* libicucore.dylib */; };
+		2DD3D706180E838F001AE925 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D705180E838F001AE925 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2DD3D70B180E8B57001AE925 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D709180E8B57001AE925 /* WebViewController.m */; };
+		2DD3D70C180E8B57001AE925 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D70A180E8B57001AE925 /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,8 +205,8 @@
 		2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		2D224DA91809179700FC9B55 /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		2D224DAA1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
-		2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHLGlobalUICommon.h; sourceTree = "<group>"; };
-		2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXHLGlobalUICommon.m; sourceTree = "<group>"; };
+		2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXHLGlobalUICommon.h; path = SVPullToRefresh/WXHLGlobalUICommon.h; sourceTree = "<group>"; };
+		2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXHLGlobalUICommon.m; path = SVPullToRefresh/WXHLGlobalUICommon.m; sourceTree = "<group>"; };
 		2D224DB0180BF30B00FC9B55 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
 		2D224DB1180BF30B00FC9B55 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
 		2D224DB3180BF31D00FC9B55 /* CommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
@@ -235,6 +240,14 @@
 		2DD3D6F6180E7592001AE925 /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
 		2DD3D6F8180E78D3001AE925 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
 		2DD3D6F9180E78D3001AE925 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		2DD3D6FD180E82CC001AE925 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		2DD3D6FF180E82CC001AE925 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		2DD3D702180E8362001AE925 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		2DD3D704180E838F001AE925 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		2DD3D705180E838F001AE925 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		2DD3D708180E8B57001AE925 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		2DD3D709180E8B57001AE925 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		2DD3D70A180E8B57001AE925 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +255,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD3D703180E8362001AE925 /* libicucore.dylib in Frameworks */,
 				2D224CDA17F96EC800FC9B55 /* CoreGraphics.framework in Frameworks */,
 				2D224CDC17F96EC800FC9B55 /* UIKit.framework in Frameworks */,
 				2D224CD817F96EC800FC9B55 /* Foundation.framework in Frameworks */,
@@ -283,6 +297,7 @@
 		2D224CD617F96EC800FC9B55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D702180E8362001AE925 /* libicucore.dylib */,
 				2D224CD717F96EC800FC9B55 /* Foundation.framework */,
 				2D224CD917F96EC800FC9B55 /* CoreGraphics.framework */,
 				2D224CDB17F96EC800FC9B55 /* UIKit.framework */,
@@ -359,12 +374,17 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D6FC180E82CC001AE925 /* RegexKitLite */,
 				2DD3D6F4180E7584001AE925 /* RTLabel */,
 				2DD3D6E4180E3A90001AE925 /* MBProgressHUD */,
 				2DD3D6D3180D3EBD001AE925 /* TPKeyboardAvoiding */,
 				2D224DA51809179700FC9B55 /* SVPullToRefresh */,
 				2D224DA21807EFF000FC9B55 /* UIUtils.h */,
 				2D224DA31807EFF000FC9B55 /* UIUtils.m */,
+				2DD3D704180E838F001AE925 /* NSString+URLEncoding.h */,
+				2DD3D705180E838F001AE925 /* NSString+URLEncoding.m */,
+				2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */,
+				2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */,
 				2D224D8F1806930100FC9B55 /* UIView+Additions.h */,
 				2D224D901806930100FC9B55 /* UIView+Additions.m */,
 				2D224D2F17F971A600FC9B55 /* UIViewExt.h */,
@@ -422,6 +442,7 @@
 		2D224D4D180673C000FC9B55 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D707180E8A50001AE925 /* Other */,
 				2D224D881806908000FC9B55 /* Home */,
 				2D224D8E180690EC00FC9B55 /* Topic */,
 				2DD3D6EE180E6252001AE925 /* User */,
@@ -510,8 +531,6 @@
 		2D224DA51809179700FC9B55 /* SVPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				2D224DAD180BC77000FC9B55 /* WXHLGlobalUICommon.h */,
-				2D224DAE180BC77000FC9B55 /* WXHLGlobalUICommon.m */,
 				2D224DA61809179700FC9B55 /* SVPullToRefresh.h */,
 				2D224DA71809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.h */,
 				2D224DA81809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m */,
@@ -581,6 +600,25 @@
 				2DD3D6F6180E7592001AE925 /* RTLabel.m */,
 			);
 			name = RTLabel;
+			sourceTree = "<group>";
+		};
+		2DD3D6FC180E82CC001AE925 /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6FD180E82CC001AE925 /* RegexKitLite.h */,
+				2DD3D6FF180E82CC001AE925 /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
+			sourceTree = "<group>";
+		};
+		2DD3D707180E8A50001AE925 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D708180E8B57001AE925 /* WebViewController.h */,
+				2DD3D709180E8B57001AE925 /* WebViewController.m */,
+				2DD3D70A180E8B57001AE925 /* WebViewController.xib */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,6 +699,7 @@
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
 				2DD3D6F3180E6287001AE925 /* PersonViewController.xib in Resources */,
 				2DD3D6FA180E78D3001AE925 /* Icon-114.png in Resources */,
+				2DD3D70C180E8B57001AE925 /* WebViewController.xib in Resources */,
 				2DD3D6E9180E3BD0001AE925 /* 37x-Checkmark.png in Resources */,
 				2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
@@ -693,6 +732,7 @@
 				2D224DAC1809179700FC9B55 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				2D224D911806930100FC9B55 /* UIView+Additions.m in Sources */,
 				2D224D56180681AF00FC9B55 /* TopicTableView.m in Sources */,
+				2DD3D70B180E8B57001AE925 /* WebViewController.m in Sources */,
 				2D224D3117F971A600FC9B55 /* UIViewExt.m in Sources */,
 				2D224DC1180CDA5B00FC9B55 /* NodeModel.m in Sources */,
 				2D224D2517F970E400FC9B55 /* AFImageRequestOperation.m in Sources */,
@@ -717,6 +757,7 @@
 				2D224D8418068C8400FC9B55 /* UIImage+GIF.m in Sources */,
 				2DD3D6DC180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				2D224D8618068C8400FC9B55 /* UIImage+WebP.m in Sources */,
+				2DD3D706180E838F001AE925 /* NSString+URLEncoding.m in Sources */,
 				2DD3D6F2180E6287001AE925 /* PersonViewController.m in Sources */,
 				2D224D2917F970E400FC9B55 /* AFURLConnectionOperation.m in Sources */,
 				2D224D7D18068C8400FC9B55 /* SDWebImageCompat.m in Sources */,
@@ -732,6 +773,7 @@
 				2D224D2B17F970E400FC9B55 /* UIImageView+AFNetworking.m in Sources */,
 				2DD3D6F7180E7592001AE925 /* RTLabel.m in Sources */,
 				2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */,
+				2DD3D701180E82CC001AE925 /* RegexKitLite.m in Sources */,
 				2D224DB8180C3F4C00FC9B55 /* SendViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */,
