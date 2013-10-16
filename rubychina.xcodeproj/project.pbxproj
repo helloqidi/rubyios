@@ -81,6 +81,9 @@
 		2DD3D6ED180E612B001AE925 /* InterfaceImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6EC180E612B001AE925 /* InterfaceImageView.m */; };
 		2DD3D6F2180E6287001AE925 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F0180E6287001AE925 /* PersonViewController.m */; };
 		2DD3D6F3180E6287001AE925 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F1180E6287001AE925 /* PersonViewController.xib */; };
+		2DD3D6F7180E7592001AE925 /* RTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F6180E7592001AE925 /* RTLabel.m */; };
+		2DD3D6FA180E78D3001AE925 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F8180E78D3001AE925 /* Icon-114.png */; };
+		2DD3D6FB180E78D3001AE925 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F9180E78D3001AE925 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +231,10 @@
 		2DD3D6EF180E6287001AE925 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
 		2DD3D6F0180E6287001AE925 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
 		2DD3D6F1180E6287001AE925 /* PersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		2DD3D6F5180E7592001AE925 /* RTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTLabel.h; sourceTree = "<group>"; };
+		2DD3D6F6180E7592001AE925 /* RTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTLabel.m; sourceTree = "<group>"; };
+		2DD3D6F8180E78D3001AE925 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		2DD3D6F9180E78D3001AE925 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +312,8 @@
 		2D224CDE17F96EC800FC9B55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D6F8180E78D3001AE925 /* Icon-114.png */,
+				2DD3D6F9180E78D3001AE925 /* Icon.png */,
 				2D224CDF17F96EC800FC9B55 /* rubychina-Info.plist */,
 				2D224CE017F96EC800FC9B55 /* InfoPlist.strings */,
 				2D224CE317F96EC800FC9B55 /* main.m */,
@@ -350,6 +359,7 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D6F4180E7584001AE925 /* RTLabel */,
 				2DD3D6E4180E3A90001AE925 /* MBProgressHUD */,
 				2DD3D6D3180D3EBD001AE925 /* TPKeyboardAvoiding */,
 				2D224DA51809179700FC9B55 /* SVPullToRefresh */,
@@ -564,6 +574,15 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		2DD3D6F4180E7584001AE925 /* RTLabel */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6F5180E7592001AE925 /* RTLabel.h */,
+				2DD3D6F6180E7592001AE925 /* RTLabel.m */,
+			);
+			name = RTLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -641,6 +660,7 @@
 			files = (
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
 				2DD3D6F3180E6287001AE925 /* PersonViewController.xib in Resources */,
+				2DD3D6FA180E78D3001AE925 /* Icon-114.png in Resources */,
 				2DD3D6E9180E3BD0001AE925 /* 37x-Checkmark.png in Resources */,
 				2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
@@ -650,6 +670,7 @@
 				2D224DB4180BF31D00FC9B55 /* CommentView.xib in Resources */,
 				2D224D4B18065B6F00FC9B55 /* HomeViewController.xib in Resources */,
 				2D224DBE180C464E00FC9B55 /* NodeSelectViewController.xib in Resources */,
+				2DD3D6FB180E78D3001AE925 /* Icon.png in Resources */,
 				2D224DB9180C3F4C00FC9B55 /* SendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +730,7 @@
 				2D224D7C18068C8400FC9B55 /* SDImageCache.m in Sources */,
 				2D224D7F18068C8400FC9B55 /* SDWebImageDownloader.m in Sources */,
 				2D224D2B17F970E400FC9B55 /* UIImageView+AFNetworking.m in Sources */,
+				2DD3D6F7180E7592001AE925 /* RTLabel.m in Sources */,
 				2D224D8C180690DD00FC9B55 /* TopicViewController.m in Sources */,
 				2D224DB8180C3F4C00FC9B55 /* SendViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
