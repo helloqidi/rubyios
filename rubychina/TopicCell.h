@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "TopicModel.h"
+#import "InterfaceImageView.h"
 
 @interface TopicCell : UITableViewCell
 
 @property (nonatomic, strong) TopicModel *topic;
 
-@property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (strong, nonatomic) IBOutlet InterfaceImageView *avatarImage;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *loginLabel;
 

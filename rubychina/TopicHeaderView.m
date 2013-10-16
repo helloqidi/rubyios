@@ -8,6 +8,7 @@
 
 #import "TopicHeaderView.h"
 #import "UIImageView+WebCache.h"
+#import "PersonViewController.h"
 
 @implementation TopicHeaderView
 
@@ -31,6 +32,12 @@
     //头像
     NSURL *avatarUrl = [NSURL URLWithString:self.topic.user.avatarUrl];
     [self.avatarImage setImageWithURL:avatarUrl];
+    __block TopicHeaderView *this = self;
+    self.avatarImage.touchBlock = ^{
+        PersonViewController *userViewController = [[PersonViewController alloc] init];
+        userViewController.user = this.topic.user;
+        [this.viewController.navigationController pushViewController:userViewController animated:YES];
+    };
     
     //描述
     self.bodyLabel.text = self.topic.body;

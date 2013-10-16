@@ -78,6 +78,9 @@
 		2DD3D6E3180E39B7001AE925 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6E2180E39B7001AE925 /* BaseViewController.m */; };
 		2DD3D6E7180E3AD7001AE925 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6E6180E3AD7001AE925 /* MBProgressHUD.m */; };
 		2DD3D6E9180E3BD0001AE925 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6E8180E3BD0001AE925 /* 37x-Checkmark.png */; };
+		2DD3D6ED180E612B001AE925 /* InterfaceImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6EC180E612B001AE925 /* InterfaceImageView.m */; };
+		2DD3D6F2180E6287001AE925 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F0180E6287001AE925 /* PersonViewController.m */; };
+		2DD3D6F3180E6287001AE925 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6F1180E6287001AE925 /* PersonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +223,11 @@
 		2DD3D6E5180E3AD7001AE925 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2DD3D6E6180E3AD7001AE925 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2DD3D6E8180E3BD0001AE925 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
+		2DD3D6EB180E612B001AE925 /* InterfaceImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceImageView.h; sourceTree = "<group>"; };
+		2DD3D6EC180E612B001AE925 /* InterfaceImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceImageView.m; sourceTree = "<group>"; };
+		2DD3D6EF180E6287001AE925 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		2DD3D6F0180E6287001AE925 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		2DD3D6F1180E6287001AE925 /* PersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +294,7 @@
 				2D224D4C180673A100FC9B55 /* Models */,
 				2D224D0E17F970B300FC9B55 /* Classes */,
 				2DD3D6E0180E399A001AE925 /* BaseViews */,
+				2DD3D6EA180E610E001AE925 /* CommonViews */,
 				2D224D0C17F9708E00FC9B55 /* Resources */,
 				2D224CE917F96EC800FC9B55 /* Images.xcassets */,
 				2D224CDE17F96EC800FC9B55 /* Supporting Files */,
@@ -405,6 +414,7 @@
 			children = (
 				2D224D881806908000FC9B55 /* Home */,
 				2D224D8E180690EC00FC9B55 /* Topic */,
+				2DD3D6EE180E6252001AE925 /* User */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -535,6 +545,25 @@
 			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		2DD3D6EA180E610E001AE925 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6EB180E612B001AE925 /* InterfaceImageView.h */,
+				2DD3D6EC180E612B001AE925 /* InterfaceImageView.m */,
+			);
+			name = CommonViews;
+			sourceTree = "<group>";
+		};
+		2DD3D6EE180E6252001AE925 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6EF180E6287001AE925 /* PersonViewController.h */,
+				2DD3D6F0180E6287001AE925 /* PersonViewController.m */,
+				2DD3D6F1180E6287001AE925 /* PersonViewController.xib */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -611,6 +640,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
+				2DD3D6F3180E6287001AE925 /* PersonViewController.xib in Resources */,
 				2DD3D6E9180E3BD0001AE925 /* 37x-Checkmark.png in Resources */,
 				2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
@@ -666,6 +696,7 @@
 				2D224D8418068C8400FC9B55 /* UIImage+GIF.m in Sources */,
 				2DD3D6DC180D3EBD001AE925 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				2D224D8618068C8400FC9B55 /* UIImage+WebP.m in Sources */,
+				2DD3D6F2180E6287001AE925 /* PersonViewController.m in Sources */,
 				2D224D2917F970E400FC9B55 /* AFURLConnectionOperation.m in Sources */,
 				2D224D7D18068C8400FC9B55 /* SDWebImageCompat.m in Sources */,
 				2D224DB2180BF30B00FC9B55 /* CommentView.m in Sources */,
@@ -682,6 +713,7 @@
 				2D224DB8180C3F4C00FC9B55 /* SendViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */,
+				2DD3D6ED180E612B001AE925 /* InterfaceImageView.m in Sources */,
 				2D224D8518068C8400FC9B55 /* UIImage+MultiFormat.m in Sources */,
 				2D224D8318068C8400FC9B55 /* UIButton+WebCache.m in Sources */,
 				2D224D7B18068C8400FC9B55 /* NSData+GIF.m in Sources */,

@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "TopicModel.h"
+#import "InterfaceImageView.h"
 
 @interface TopicHeaderView : UIView
 
 @property (nonatomic, strong) TopicModel *topic;
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (strong, nonatomic) IBOutlet InterfaceImageView *avatarImage;
 
 @property (strong, nonatomic) IBOutlet UILabel *bodyLabel;
 

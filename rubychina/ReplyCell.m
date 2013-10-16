@@ -9,6 +9,7 @@
 #import "ReplyCell.h"
 #import "UIImageView+WebCache.h"
 #import "UIUtils.h"
+#import "PersonViewController.h"
 
 @implementation ReplyCell
 
@@ -30,7 +31,12 @@
     //头像
     NSURL *avatarUrl = [NSURL URLWithString:self.reply.user.avatarUrl];
     [self.avatarImage setImageWithURL:avatarUrl];
-    
+    __block ReplyCell *this = self;
+    self.avatarImage.touchBlock = ^{
+        PersonViewController *userViewController = [[PersonViewController alloc] init];
+        userViewController.user = this.reply.user;
+        [this.viewController.navigationController pushViewController:userViewController animated:YES];
+    };
     
     //内容
     self.bodyLabel.text = self.reply.body;

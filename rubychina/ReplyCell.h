@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "ReplyModel.h"
+#import "InterfaceImageView.h"
 
 @interface ReplyCell : UITableViewCell
 
 @property (nonatomic, strong) ReplyModel *reply;
 
 @property (strong, nonatomic) IBOutlet UILabel *loginLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *avatarImage;
+@property (strong, nonatomic) IBOutlet InterfaceImageView *avatarImage;
 @property (strong, nonatomic) IBOutlet UILabel *bodyLabel;
 @property (strong, nonatomic) IBOutlet UILabel *createAtLabel;
 @end
