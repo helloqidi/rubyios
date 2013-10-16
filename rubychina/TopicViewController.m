@@ -11,6 +11,7 @@
 #import "SVPullToRefresh.h"
 #import "CommentView.h"
 #import "AFHTTPRequestOperation.h"
+#import "UIUtils.h"
 
 @interface TopicViewController ()
 
@@ -88,7 +89,8 @@
     
     //获得描述的高度
     RTLabel *label = [[RTLabel alloc] initWithFrame:CGRectMake(0, 0, 304, 0)];
-    [label setText:self.topic.body];
+    NSString *parseText = [UIUtils parseLink:self.topic.body];
+    [label setText:parseText];
     //获得高度(20是根据情况调整的高度)
     float contentHeight = label.optimumSize.height+20;
     

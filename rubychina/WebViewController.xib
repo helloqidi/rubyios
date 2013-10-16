@@ -24,7 +24,7 @@
                     </connections>
                 </webView>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXd-3e-o4b">
-                    <rect key="frame" x="-5" y="441" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="441" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem style="plain" id="iyL-BD-bzE">
