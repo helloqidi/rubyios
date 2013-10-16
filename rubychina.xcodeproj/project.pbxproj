@@ -75,6 +75,9 @@
 		2DD3D6DD180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6D7180D3EBD001AE925 /* TPKeyboardAvoidingScrollView.m */; };
 		2DD3D6DE180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6D9180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m */; };
 		2DD3D6DF180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6DB180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		2DD3D6E3180E39B7001AE925 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6E2180E39B7001AE925 /* BaseViewController.m */; };
+		2DD3D6E7180E3AD7001AE925 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D6E6180E3AD7001AE925 /* MBProgressHUD.m */; };
+		2DD3D6E9180E3BD0001AE925 /* 37x-Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D6E8180E3BD0001AE925 /* 37x-Checkmark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +215,11 @@
 		2DD3D6D9180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		2DD3D6DA180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		2DD3D6DB180D3EBD001AE925 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		2DD3D6E1180E39B7001AE925 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		2DD3D6E2180E39B7001AE925 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		2DD3D6E5180E3AD7001AE925 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2DD3D6E6180E3AD7001AE925 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2DD3D6E8180E3BD0001AE925 /* 37x-Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "37x-Checkmark.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +285,7 @@
 				2D224D4D180673C000FC9B55 /* Controllers */,
 				2D224D4C180673A100FC9B55 /* Models */,
 				2D224D0E17F970B300FC9B55 /* Classes */,
+				2DD3D6E0180E399A001AE925 /* BaseViews */,
 				2D224D0C17F9708E00FC9B55 /* Resources */,
 				2D224CE917F96EC800FC9B55 /* Images.xcassets */,
 				2D224CDE17F96EC800FC9B55 /* Supporting Files */,
@@ -332,6 +341,7 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D6E4180E3A90001AE925 /* MBProgressHUD */,
 				2DD3D6D3180D3EBD001AE925 /* TPKeyboardAvoiding */,
 				2D224DA51809179700FC9B55 /* SVPullToRefresh */,
 				2D224DA21807EFF000FC9B55 /* UIUtils.h */,
@@ -506,6 +516,25 @@
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
+		2DD3D6E0180E399A001AE925 /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6E1180E39B7001AE925 /* BaseViewController.h */,
+				2DD3D6E2180E39B7001AE925 /* BaseViewController.m */,
+			);
+			name = BaseViews;
+			sourceTree = "<group>";
+		};
+		2DD3D6E4180E3A90001AE925 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D6E8180E3BD0001AE925 /* 37x-Checkmark.png */,
+				2DD3D6E5180E3AD7001AE925 /* MBProgressHUD.h */,
+				2DD3D6E6180E3AD7001AE925 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -582,6 +611,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
+				2DD3D6E9180E3BD0001AE925 /* 37x-Checkmark.png in Resources */,
 				2D224DA11807E07000FC9B55 /* ReplyCell.xib in Resources */,
 				2D224D5B1806873A00FC9B55 /* TopicCell.xib in Resources */,
 				2D224CEA17F96EC800FC9B55 /* Images.xcassets in Resources */,
@@ -616,6 +646,7 @@
 				2D224DC1180CDA5B00FC9B55 /* NodeModel.m in Sources */,
 				2D224D2517F970E400FC9B55 /* AFImageRequestOperation.m in Sources */,
 				2D224DAB1809179700FC9B55 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				2DD3D6E3180E39B7001AE925 /* BaseViewController.m in Sources */,
 				2D224CE817F96EC800FC9B55 /* AppDelegate.m in Sources */,
 				2D224D941806E52300FC9B55 /* ReplyModel.m in Sources */,
 				2DD3D6DE180D3EBD001AE925 /* TPKeyboardAvoidingTableView.m in Sources */,
@@ -643,6 +674,7 @@
 				2D224DBD180C464E00FC9B55 /* NodeSelectViewController.m in Sources */,
 				2D224DA41807EFF000FC9B55 /* UIUtils.m in Sources */,
 				2D224D2617F970E400FC9B55 /* AFJSONRequestOperation.m in Sources */,
+				2DD3D6E7180E3AD7001AE925 /* MBProgressHUD.m in Sources */,
 				2D224D7C18068C8400FC9B55 /* SDImageCache.m in Sources */,
 				2D224D7F18068C8400FC9B55 /* SDWebImageDownloader.m in Sources */,
 				2D224D2B17F970E400FC9B55 /* UIImageView+AFNetworking.m in Sources */,

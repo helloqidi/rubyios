@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "NodeModel.h"
 
 @class NodeSelectViewController;
@@ -17,7 +18,7 @@
 
 @end
 
-@interface NodeSelectViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+@interface NodeSelectViewController : BaseViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (nonatomic, assign)id<NodeSelectDelegate> nodeSelectDelegate;

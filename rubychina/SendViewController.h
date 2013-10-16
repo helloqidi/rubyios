@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "NodeSelectViewController.h"
 #import "TPKeyboardAvoidingTableView.h"
 
-@interface SendViewController : UIViewController <UITableViewDataSource,UITabBarDelegate,NodeSelectDelegate>
+@interface SendViewController : BaseViewController <UITableViewDataSource,UITabBarDelegate,NodeSelectDelegate>
 @property (strong, nonatomic) IBOutlet TPKeyboardAvoidingTableView *tableView;
 
 @end

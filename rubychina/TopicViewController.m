@@ -63,6 +63,8 @@
 #pragma mark - data
 - (void)requestTopicData
 {
+    [super showHUD:MESSAGE_REQUEST_LOADING];
+    
     NSString *path = [NSString stringWithFormat:URL_TOPIC_DETAIL,self.topic.id];
     [[AFAppDotNetAPIClient sharedClient] getPath:path
                                       parameters:nil
@@ -72,12 +74,15 @@
                                          }
                                          failure:^(AFHTTPRequestOperation *operation, NSError *error){
                                              NSLog(@"error:%@",error);
+                                             [super showHUDComplete:MESSAGE_REQUEST_FAIL];
                                          }];
 
 }
 
 - (void)requestTopicDataFinish:(NSDictionary *)jsonDic
 {
+    [super hideHUD];
+    
     TopicModel *topic = [[TopicModel alloc] initWithAttributes:jsonDic];
     self.topic = topic;
     
@@ -109,6 +114,7 @@
 
 //发布评论
 - (void)postCommentData{
+    [super showHUD:MESSAGE_REQUEST_COMMIT];
     NSString *path = [NSString stringWithFormat:URL_CREATE_REPLY,self.topic.id];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
@@ -126,16 +132,19 @@
                                                 }
                                                 failure:^(AFHTTPRequestOperation *operation, NSError *error){
                                                     NSLog(@"error:%@",error);
+                                                    [super showHUDComplete:MESSAGE_REQUEST_FAIL];
                                                 }];
 }
 
 //评论完成
 - (void)postCommentDataFinish:(id)responseData
 {
+    [super hideHUD];
     if ([responseData isEqualToString:@"true"]) {
         self.commentView.commentField.text =@"";
     }else{
         NSLog(@"error when save!");
+        [super showHUDComplete:MESSAGE_REQUEST_SERVER_ERROR];
     }
 }
 

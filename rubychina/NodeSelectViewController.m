@@ -56,6 +56,7 @@
 #pragma mark - data
 - (void)requestNodeData
 {
+    [super showHUD:MESSAGE_REQUEST_LOADING];
     [[AFAppDotNetAPIClient sharedClient] getPath:URL_NODE_ALL
                                       parameters:nil
                                          success:^(AFHTTPRequestOperation *operation, id JSON) {
@@ -64,12 +65,14 @@
                                          }
                                          failure:^(AFHTTPRequestOperation *operation, NSError *error){
                                              NSLog(@"error:%@",error);
+                                             [super showHUDComplete:MESSAGE_REQUEST_FAIL];
                                          }];
 }
 
 
 - (void)requestNodeDataFinish:(NSArray *)jsonArray
 {
+    [super hideHUD];
     for (NSDictionary *nodeDic in jsonArray) {
         //获得section信息
         NSString *sectionName = [nodeDic objectForKey:@"section_name"];

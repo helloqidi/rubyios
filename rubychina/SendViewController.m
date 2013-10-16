@@ -49,6 +49,7 @@
 #pragma mark - data
 - (void)postTopicData
 {
+    [super showHUD:MESSAGE_REQUEST_COMMIT];
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                    self.titleField.text,
                                    @"title",
@@ -59,10 +60,14 @@
                                    MY_TOKEN,
                                    @"token", nil];
     
+    
     //暂时先不上传，为了保证网站内容质量
     NSLog(@"%@",params);
+    [super hideHUD];
     [self.navigationController popViewControllerAnimated:YES];
     return;
+    
+    
     
     [[AFAppDotNetAPIClient sharedClientNoJson] postPath:URL_TOPIC_ACTIVE
                                              parameters:params
@@ -73,16 +78,19 @@
                                                 }
                                                 failure:^(AFHTTPRequestOperation *operation, NSError *error){
                                                     NSLog(@"error:%@",error);
+                                                    [super showHUDComplete:MESSAGE_REQUEST_FAIL];
                                                 }];
 }
 
 //发布话题完成
 - (void)postTopicDataFinish:(id)responseData
 {
+    [super hideHUD];
     if ([responseData isEqualToString:@"true"]) {
         [self.navigationController popViewControllerAnimated:YES];
     }else{
         NSLog(@"error when save!");
+        [super showHUDComplete:MESSAGE_REQUEST_SERVER_ERROR];
     }
 }
 

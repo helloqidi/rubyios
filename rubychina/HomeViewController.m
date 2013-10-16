@@ -41,6 +41,9 @@
     
     [self initBarButtonItems];
     
+    //无数据时先隐藏
+    self.tableView.hidden = YES;
+    
     [self initRequestTopicData];
     
     [self initTableViewPullRefresh];
@@ -82,6 +85,8 @@
 //初始请求话题数据
 - (void)initRequestTopicData
 {
+    [super showHUD:MESSAGE_REQUEST_LOADING];
+    
     [[AFAppDotNetAPIClient sharedClient] getPath:URL_TOPIC_ACTIVE
                                       parameters:nil
                                         success:^(AFHTTPRequestOperation *operation, id JSON) {
@@ -89,13 +94,16 @@
                                             [self requestTopicDataFinish:jsonArray];
                                         }
                                         failure:^(AFHTTPRequestOperation *operation, NSError *error){
-                                              NSLog(@"error:%@",error);
+                                            NSLog(@"error:%@",error);
+                                            [super showHUDComplete:MESSAGE_REQUEST_FAIL];
                                         }];
 }
 
 //请求话题数据完成
 - (void)requestTopicDataFinish:(NSArray *)jsonArray
 {
+    [super hideHUD];
+    
     NSMutableArray *topics=[NSMutableArray arrayWithCapacity:jsonArray.count];
     for (NSDictionary *topicDic in jsonArray) {
         TopicModel *topicModel = [[TopicModel alloc] initWithAttributes:topicDic];
@@ -110,6 +118,9 @@
     
     //初始化页数
     self.lastPage += 1;
+    
+    //显示tableView
+    self.tableView.hidden = NO;
 }
 
 //滚动加载

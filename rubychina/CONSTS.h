@@ -32,4 +32,13 @@
 //获取设备物理宽度
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
+//加载中
+#define MESSAGE_REQUEST_LOADING @"加载中..."
+//网络不通
+#define MESSAGE_REQUEST_FAIL @"网络不给力啊"
+//服务器返回内容出错
+#define MESSAGE_REQUEST_SERVER_ERROR @"请稍后再试吧"
+//提交过程中
+#define MESSAGE_REQUEST_COMMIT @"提交中..."
+
 #endif

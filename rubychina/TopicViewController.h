@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 #import "TopicModel.h"
 #import "ReplyTableView.h"
 
-@interface TopicViewController : UIViewController
+@interface TopicViewController : BaseViewController
 
 @property (nonatomic, strong) TopicModel *topic;
 
