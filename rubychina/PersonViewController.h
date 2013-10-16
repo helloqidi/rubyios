@@ -8,9 +8,11 @@
 
 #import "BaseViewController.h"
 #import "UserModel.h"
+#import "TopicTableView.h"
 
 @interface PersonViewController : BaseViewController
 
 @property (nonatomic, strong) UserModel *user;
+@property (strong, nonatomic) IBOutlet TopicTableView *tableView;
 
 @end

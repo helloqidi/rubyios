@@ -89,6 +89,8 @@
 		2DD3D706180E838F001AE925 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D705180E838F001AE925 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2DD3D70B180E8B57001AE925 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D709180E8B57001AE925 /* WebViewController.m */; };
 		2DD3D70C180E8B57001AE925 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D70A180E8B57001AE925 /* WebViewController.xib */; };
+		2DD3D70F180E9FD8001AE925 /* PersonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D70E180E9FD8001AE925 /* PersonHeaderView.m */; };
+		2DD3D711180E9FEA001AE925 /* PersonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D710180E9FEA001AE925 /* PersonHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +250,9 @@
 		2DD3D708180E8B57001AE925 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		2DD3D709180E8B57001AE925 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		2DD3D70A180E8B57001AE925 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		2DD3D70D180E9FD8001AE925 /* PersonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonHeaderView.h; sourceTree = "<group>"; };
+		2DD3D70E180E9FD8001AE925 /* PersonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonHeaderView.m; sourceTree = "<group>"; };
+		2DD3D710180E9FEA001AE925 /* PersonHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -589,6 +594,9 @@
 				2DD3D6EF180E6287001AE925 /* PersonViewController.h */,
 				2DD3D6F0180E6287001AE925 /* PersonViewController.m */,
 				2DD3D6F1180E6287001AE925 /* PersonViewController.xib */,
+				2DD3D70D180E9FD8001AE925 /* PersonHeaderView.h */,
+				2DD3D70E180E9FD8001AE925 /* PersonHeaderView.m */,
+				2DD3D710180E9FEA001AE925 /* PersonHeaderView.xib */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -696,6 +704,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD3D711180E9FEA001AE925 /* PersonHeaderView.xib in Resources */,
 				2D224CE217F96EC800FC9B55 /* InfoPlist.strings in Resources */,
 				2DD3D6F3180E6287001AE925 /* PersonViewController.xib in Resources */,
 				2DD3D6FA180E78D3001AE925 /* Icon-114.png in Resources */,
@@ -747,6 +756,7 @@
 				2D224D9F1807E05A00FC9B55 /* ReplyCell.m in Sources */,
 				2D224D7E18068C8400FC9B55 /* SDWebImageDecoder.m in Sources */,
 				2D224CE417F96EC800FC9B55 /* main.m in Sources */,
+				2DD3D70F180E9FD8001AE925 /* PersonHeaderView.m in Sources */,
 				2D224D50180673F500FC9B55 /* TopicModel.m in Sources */,
 				2D224D8218068C8400FC9B55 /* SDWebImagePrefetcher.m in Sources */,
 				2D224D8718068C8400FC9B55 /* UIImageView+WebCache.m in Sources */,

@@ -16,6 +16,10 @@
 @property (nonatomic, strong) NSString *avatarUrl;
 //昵称
 @property (nonatomic, strong) NSString *login;
+@property (nonatomic, strong) NSString *email;
+
+//话题
+@property (nonatomic, strong) NSArray *topics;
 
 - (id)initWithAttributes:(NSDictionary *)attributes;
 

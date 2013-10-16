@@ -23,6 +23,10 @@
 #define URL_CREATE_REPLY @"topics/%@/replies.json"
 //所有节点
 #define URL_NODE_ALL @"nodes.json"
+//用户信息
+#define URL_USER_DETAIL @"users/%@.json"
+//用户的话题信息
+#define URL_USER_TOPIC @"users/%@/topics.json"
 
 ///////////////// 社区API接口 end //////////
 
