@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import "RegexKitLite.h"
 
 @interface WebViewController ()
 
@@ -35,11 +36,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    NSURL *url = [NSURL URLWithString:self.url];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
     
+    NSString *regex = @"\\.(jpg)|(JPG)|(jpeg)|(JPEG)|(png)|(PNG)$";
+    NSArray *matchArray = [self.url componentsMatchedByRegex:regex];
+    NSURL *url = [NSURL URLWithString:self.url];
+    //是图片
+    if (matchArray.count > 0) {
+        NSString *HTMLData =[NSString stringWithFormat:@"<img src='%@' />",url];
+        [self.webView loadHTMLString:HTMLData baseURL:nil];
+    //是网页
+    }else{
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [self.webView loadRequest:request];
+    }
     self.title = @"Loading...";
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }

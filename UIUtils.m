@@ -60,7 +60,8 @@
 
 + (NSString *)parseLink:(NSString *)text {
     // regular expresion
-    NSString *regex = @"([a-zA-z]+://[^\\s]*)";
+    //注：之所以加了 ^\\) 是因为rubychina的图片链接是这种:![](http://l.ruby-china.org/photo/93c9605f5895705689716c6b399f8cf1.jpg) ,要把最后的括号过滤掉.
+    NSString *regex = @"[a-zA-z]+://[^\\s\\)]*";
     NSArray *matchArray = [text componentsMatchedByRegex:regex];
     
     for (NSString *linkString in matchArray) {
