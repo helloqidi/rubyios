@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 
+- (IBAction)goBack:(id)sender;
+- (IBAction)goForward:(id)sender;
+- (IBAction)refresh:(id)sender;
 
 - (id)initWithUrl:(NSString *)url;
 
