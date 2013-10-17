@@ -91,6 +91,8 @@
 		2DD3D70C180E8B57001AE925 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D70A180E8B57001AE925 /* WebViewController.xib */; };
 		2DD3D70F180E9FD8001AE925 /* PersonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D70E180E9FD8001AE925 /* PersonHeaderView.m */; };
 		2DD3D711180E9FEA001AE925 /* PersonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DD3D710180E9FEA001AE925 /* PersonHeaderView.xib */; };
+		2DD3D717180FB337001AE925 /* SVSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D714180FB337001AE925 /* SVSegmentedControl.m */; };
+		2DD3D718180FB337001AE925 /* SVSegmentedThumb.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD3D716180FB337001AE925 /* SVSegmentedThumb.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +255,10 @@
 		2DD3D70D180E9FD8001AE925 /* PersonHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonHeaderView.h; sourceTree = "<group>"; };
 		2DD3D70E180E9FD8001AE925 /* PersonHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonHeaderView.m; sourceTree = "<group>"; };
 		2DD3D710180E9FEA001AE925 /* PersonHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonHeaderView.xib; sourceTree = "<group>"; };
+		2DD3D713180FB337001AE925 /* SVSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedControl.h; sourceTree = "<group>"; };
+		2DD3D714180FB337001AE925 /* SVSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedControl.m; sourceTree = "<group>"; };
+		2DD3D715180FB337001AE925 /* SVSegmentedThumb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSegmentedThumb.h; sourceTree = "<group>"; };
+		2DD3D716180FB337001AE925 /* SVSegmentedThumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSegmentedThumb.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +385,7 @@
 		2D224D0E17F970B300FC9B55 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3D712180FB336001AE925 /* SVSegmentedControl */,
 				2DD3D6FC180E82CC001AE925 /* RegexKitLite */,
 				2DD3D6F4180E7584001AE925 /* RTLabel */,
 				2DD3D6E4180E3A90001AE925 /* MBProgressHUD */,
@@ -629,6 +636,17 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		2DD3D712180FB336001AE925 /* SVSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				2DD3D713180FB337001AE925 /* SVSegmentedControl.h */,
+				2DD3D714180FB337001AE925 /* SVSegmentedControl.m */,
+				2DD3D715180FB337001AE925 /* SVSegmentedThumb.h */,
+				2DD3D716180FB337001AE925 /* SVSegmentedThumb.m */,
+			);
+			path = SVSegmentedControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -787,6 +805,8 @@
 				2D224DB8180C3F4C00FC9B55 /* SendViewController.m in Sources */,
 				2D224D2717F970E400FC9B55 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				2D224DAF180BC77000FC9B55 /* WXHLGlobalUICommon.m in Sources */,
+				2DD3D718180FB337001AE925 /* SVSegmentedThumb.m in Sources */,
+				2DD3D717180FB337001AE925 /* SVSegmentedControl.m in Sources */,
 				2DD3D6ED180E612B001AE925 /* InterfaceImageView.m in Sources */,
 				2D224D8518068C8400FC9B55 /* UIImage+MultiFormat.m in Sources */,
 				2D224D8318068C8400FC9B55 /* UIButton+WebCache.m in Sources */,

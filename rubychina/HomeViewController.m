@@ -10,6 +10,7 @@
 #import "TopicModel.h"
 #import "SVPullToRefresh.h"
 #import "SendViewController.h"
+#import "SVSegmentedControl.h"
 
 @interface HomeViewController ()
 
@@ -17,6 +18,8 @@
 @property (nonatomic,retain) NSMutableArray *topics;
 //已请求了第几页的数据
 @property (nonatomic, assign) int lastPage;
+
+@property (nonatomic, strong) TopicTableView *myTableView;
 
 @end
 
@@ -26,7 +29,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = @"首页";
     }
     return self;
 }
@@ -41,6 +43,8 @@
     
     [self initBarButtonItems];
     
+    [self initTitleView];
+    
     //无数据时先隐藏
     self.tableView.hidden = YES;
     
@@ -49,6 +53,31 @@
     [self initTableViewPullRefresh];
 }
 
+- (void)initTitleView
+{
+	SVSegmentedControl *navSC = [[SVSegmentedControl alloc] initWithSectionTitles:[NSArray arrayWithObjects:@"活跃", @"我的", nil]];
+    navSC.textColor = [UIColor lightGrayColor];
+    
+    navSC.changeHandler = ^(NSUInteger newIndex) {
+        [self changeSegment:newIndex];
+    };
+    self.navigationItem.titleView = navSC;
+}
+
+//segment切换
+- (void)changeSegment:(NSUInteger )index
+{
+    if (index == 0) {
+        self.tableView.hidden = NO;
+        self.myTableView.hidden = YES;
+    }
+    if (index == 1) {
+        self.tableView.hidden = YES;
+        [self initMyTableView];
+    }
+}
+
+//初始导航按钮
 - (void)initBarButtonItems
 {
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(sendAction)];
@@ -80,6 +109,18 @@
     [weakSelf.tableView.pullToRefreshView stopAnimating];
 }
 
+//切换到“我的”tableView
+- (void)initMyTableView
+{
+    if (self.myTableView == nil) {
+        self.myTableView = [[TopicTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
+        self.myTableView.hidden = YES;
+        [self.view addSubview:self.myTableView];
+        
+        [self requestMyTopicData];
+    }
+    self.myTableView.hidden = NO;
+}
 
 #pragma mark - data
 //初始请求话题数据
@@ -143,6 +184,47 @@
     
     __weak HomeViewController *weakSelf = self;
     [weakSelf.tableView.infiniteScrollingView stopAnimating];
+}
+
+
+- (void)requestMyTopicData
+{
+    [super showHUD:MESSAGE_REQUEST_LOADING];
+    
+    NSString *path = [NSString stringWithFormat:URL_USER_TOPIC,MY_LOGIN];
+    [[AFAppDotNetAPIClient sharedClient] getPath:path
+                                      parameters:nil
+                                         success:^(AFHTTPRequestOperation *operation, id JSON) {
+                                             NSArray *jsonArray = (NSArray *) JSON;
+                                             [self requestMyTopicDataFinish:jsonArray];
+                                         }
+                                         failure:^(AFHTTPRequestOperation *operation, NSError *error){
+                                             NSLog(@"error:%@",error);
+                                             [super showHUDComplete:MESSAGE_REQUEST_FAIL];
+                                         }];
+    
+}
+
+- (void)requestMyTopicDataFinish:(NSArray *)jsonArray
+{
+    [super hideHUD];
+    
+    NSMutableArray *topics=[NSMutableArray arrayWithCapacity:jsonArray.count];
+    for (NSDictionary *topicDic in jsonArray) {
+        TopicModel *topicModel = [[TopicModel alloc] initWithAttributes:topicDic];
+        [topics addObject:topicModel];
+    }
+
+    NSDictionary *userDic = [NSDictionary dictionaryWithObjectsAndKeys:MY_LOGIN,@"login",MY_AVATAR,@"avatar_url", nil];
+    
+    UserModel *user = [[UserModel alloc] initWithAttributes:userDic];
+
+    for (TopicModel *topic in topics) {
+        topic.user = user;
+    }
+    
+    self.myTableView.tableData = topics;
+    [self.myTableView reloadData];
 }
 
 #pragma mark - action

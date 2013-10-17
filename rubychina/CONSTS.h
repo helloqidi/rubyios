@@ -14,6 +14,9 @@
 #define BASE_URL @"http://ruby-china.org/api/"
 // 个人特别token
 #define MY_TOKEN @"053f71974c3d1a731b6f:580"
+// 个人用户名
+#define MY_LOGIN @"helloqidi"
+#define MY_AVATAR @"http://ruby-china.org/avatar/b2cd45f628706155904140ed9e6086f0.png?s=240&d=404"
 
 //话题列表 / 发布话题
 #define URL_TOPIC_ACTIVE @"topics.json"
