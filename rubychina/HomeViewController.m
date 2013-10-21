@@ -11,6 +11,7 @@
 #import "SVPullToRefresh.h"
 #import "SendViewController.h"
 #import "SVSegmentedControl.h"
+#import "ReaderViewController.h"
 
 @interface HomeViewController ()
 
@@ -81,7 +82,10 @@
 - (void)initBarButtonItems
 {
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStylePlain target:self action:@selector(sendAction)];
-    self.navigationItem.leftBarButtonItem =leftItem;
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"二维码" style:UIBarButtonItemStylePlain target:self action:@selector(qrcodeAction)];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)initTableViewPullRefresh
@@ -232,6 +236,12 @@
 {
     SendViewController *sendCtrl = [[SendViewController alloc] init];
     [self.navigationController pushViewController:sendCtrl animated:YES];
+}
+
+- (void)qrcodeAction
+{
+    ReaderViewController *readerCtrl = [[ReaderViewController alloc] init];
+    [self.navigationController pushViewController:readerCtrl animated:YES];
 }
 
 #pragma mark - dealloc
